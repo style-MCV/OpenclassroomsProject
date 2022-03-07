@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <title></title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   <h1>Un super titre</h1>
-</body>
+   <html lang="fr">
+   <head>
+      <meta charset="utf-8" />
+
+      <title>ohmyfood</title>
+      <!--meta utf8-->
+
+      <link rel="stylesheet" type="text/css" href="styles.css">
+
+      <!-- Fontawesome -->
+      <script src="https://kit.fontawesome.com/6655d3d964.js" crossorigin="anonymous"></script>
+
+      <!--Polices-->
+   
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Shrikhand&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+
+      <!--Viewport: responsive-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <meta name="description" content="Choisir un restaurant gastronomique et composer son propre menu en ligne"/>
+
+
+
+   </head>
+   <body>
+      <header>
+         <h1>ohmyfood</h1>
+            <form>
+               <i class="fas fa-map-marker-alt"></i>
+               <input placeholder="Paris, Belleville">
+            </form>
+         <hgroup>
+            <h2>Réservez le menu qui vous convient</h2>
+            <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+         </hgroup>
+         <div>
+            <a href="#restaurants">Explorez nos restaurants</a>
+         </div>   
+
+      </header>
+      <main>
+         <section>
+            <h2>Fonctionnement</h2>
+               <ol>
+                  <li><i class="fa-solid fa-mobile-screen-button"></i> Choisissez un restaurant</li>
+                  <li><i class="fa-solid fa-list-ul"></i> Composez un menu</li>
+                  <li><i class="fa-solid fa-store"></i> Dégustez au restaurant</li>
+               </ol>
+         </section>
+         <section>
+            <h2 id="restaurants">Restaurants</h2>
+            <nav>
+               <ul>
+                  <li>
+                     <figure>
+                     <img src="images/restaurants/La palette du goût_mini.jpg" alt="assiettes et verres sur une table">
+                     <figcaption>
+                        <hgroup>
+                           <h3>La palette du goût</h3>
+                           <h4>Ménilmontant</h4>
+                        </hgroup>
+                        <p><i class="fa-regular fa-heart"></i></p>
+                     </figcaption>     
+                     </figure>         
+                  </li>
+                  <li>
+                     <figure>
+                        <img src="images/restaurants/La note enchantée_mini.jpg" alt="assiettes et verres sur une table">
+                        <figcaption>
+                           <hgroup>
+                              <h3>La note enchantée</h3>
+                              <h4>Charonne</h4>
+                           </hgroup>
+                        <p><i class="fa-regular fa-heart"></i></p>
+                        </figcaption>     
+                     </figure>          
+                  </li> 
+                  <li>
+                     <figure>
+                        <img src="images/restaurants/A la française_mini.jpg" alt="assiettes et verres sur une table" >
+                        <figcaption>
+                           <hgroup>
+                              <h3>A la française</h3>
+                              <h4>Cité Rouge</h4>
+                           </hgroup>
+                           <p><i class="fa-regular fa-heart"></i></p>
+                        </figcaption>     
+                     </figure>           
+                  </li>
+                  <li>
+                     <figure>
+                        <img src="images/restaurants/Le délice des sens_mini.jpg" alt="plats sur une table">
+                        <figcaption>
+                           <hgroup>
+                              <h3>Le délice des sens</h3>
+                              <h4>Folie-Méricourt</h4>
+                           </hgroup>
+                           <p><i class="fa-regular fa-heart"></i></p>
+                        </figcaption>     
+                     </figure>          
+                  </li>
+               </ul>
+            </nav>
+         </section>
+      </main>
+
+      <footer>
+         <h3>ohmyfood</h3>
+            <ul>
+               <li>
+                  <i class="fa-solid fa-utensils"> Proposer un restaurant</i>
+               </li>
+               <li>
+                  <i class="fa-solid fa-handshake-angle"> Devenir partenaire</i>
+               </li>
+               <li>Mentions légales</li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+      </footer>
+   </body>
 </html>
