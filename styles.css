@@ -54,7 +54,7 @@ table {
 }
 
 /*Violet #9356DC Rose #FF79DA Vert #99E2D0*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap');
 
 /*    font-family: 'Raleway', sans-serif;
 
@@ -64,25 +64,76 @@ table {
 
 body {
 	background-color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	width: 100%;
 }	
 
 /*HEADER*/
-/*TITRES HEADER ET FOOTER*/
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+/*LOGO*/
+h1 {
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/*CHAMP DE RECHERCHE*/
+.formulaire {
+	width: 100%;
+	background-color: #eaeaea;
+	border: 15px solid #eaeaea;
+	display: flex;
+	justify-content: center;
+	padding-left: 60px;
+}
+
+form {
+	background-color: #eaeaea;
+}
+
+.formulaire input {
+	border: none;
+	background-color: #eaeaea;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 15px;
+}
+
 h1, footer h3 {
     color: black;
-    font-family: 'Raleway', sans-serif;
     font-family: 'Shrikhand', cursive;
 }
 
 h2,h3,h4 {
-    font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
-/*MAIN*/
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
 
+header h2 {
+	
+	padding: 40px 50px 20px 50px;
+}
+
+/*MAIN*/
+main h2 {
+	padding: 20px;
+}
 figure img {
 	width: 90%;
 	height: 30%;
