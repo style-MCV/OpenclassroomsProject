@@ -54,7 +54,8 @@ table {
 }
 
 /*Violet #9356DC Rose #FF79DA Vert #99E2D0*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap');
 
 /*    font-family: 'Raleway', sans-serif;
 
@@ -95,6 +96,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	padding-left: 60px;
+	box-shadow: border-top 5px;
 }
 
 form {
@@ -125,18 +127,38 @@ h2 {
 	font-weight: bold;
 }
 
-header h2 {
-	
-	padding: 40px 50px 20px 50px;
+
+header hgroup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
+
+header h2 {
+	width: 60%;
+}
+
+header h3 {
+	width: 70%;
+}
+
+
 
 /*MAIN*/
 main h2 {
 	padding: 20px;
 }
+
+figure {
+	height: 570px;
+	box-sizing: border-box;
+}
+
 figure img {
 	width: 90%;
 	height: 30%;
 	object-fit: cover;
 	border-radius: 20px 20px 0 0;
+	object-position: center;
 }
