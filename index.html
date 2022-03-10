@@ -12,12 +12,11 @@
       <script src="https://kit.fontawesome.com/6655d3d964.js" crossorigin="anonymous"></script>
 
       <!--Polices-->
-   
+
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Shrikhand&display=swap" rel="stylesheet"> 
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
-
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+      
       <!--Viewport: responsive-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -58,20 +57,32 @@
             <nav>
                <ul>
                   <li>
+                     <a href="#">
                      <figure>
-                     <img src="images/restaurants/La palette du goût_mini.jpg" alt="assiettes et verres sur une table">
-                     <figcaption>
-                        <hgroup>
-                           <h3>La palette du goût</h3>
-                           <h4>Ménilmontant</h4>
-                        </hgroup>
-                        <p><i class="fa-regular fa-heart"></i></p>
-                     </figcaption>     
-                     </figure>         
+                        <picture>
+                           <source media="(max-width: 768px)" srcset="images/restaurants/la_palette_mini.jpg">
+                           <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_palette_moyen.jpg">
+                           <source media="(min-width: 1440px)" srcset="images/restaurants/la_palette.jpg">
+                           <img src="images/restaurants/la_palette_moyen.jpg" alt="assiettes et verres sur une table">
+                        </picture> 
+                        <figcaption>
+                           <hgroup>
+                              <h3>La palette du goût</h3>
+                              <h4>Ménilmontant</h4>
+                           </hgroup>
+                           <p><i class="fa-regular fa-heart"></i></p>
+                        </figcaption>     
+                     </figure> 
+                     </a>       
                   </li>
                   <li>
                      <figure>
-                        <img src="images/restaurants/La note enchantée_mini.jpg" alt="assiettes et verres sur une table">
+                        <picture>
+                           <source media="(max-width: 768px)" srcset="images/restaurants/la_note_mini.jpg">
+                           <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_note_moyen.jpg">
+                           <source media="(min-width: 1440px)" srcset="images/restaurants/la_note.jpg">
+                           <img src="images/restaurants/la_note_moyen.jpg" alt="assiettes et verres sur une table">
+                        </picture> 
                         <figcaption>
                            <hgroup>
                               <h3>La note enchantée</h3>
@@ -83,7 +94,12 @@
                   </li> 
                   <li>
                      <figure>
-                        <img src="images/restaurants/A la française_mini.jpg" alt="assiettes et verres sur une table" >
+                        <picture>
+                           <source media="(max-width: 768px)" srcset="images/restaurants/la_francaise_mini.jpg">
+                           <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_francaise_moyen.jpg">
+                           <source media="(min-width: 1440px)" srcset="images/restaurants/la_francaise.jpg">
+                           <img src="images/restaurants/la_francaise_moyen.jpg" alt="assiettes et verres sur une table">
+                        </picture> 
                         <figcaption>
                            <hgroup>
                               <h3>A la française</h3>
@@ -95,7 +111,12 @@
                   </li>
                   <li>
                      <figure>
-                        <img src="images/restaurants/Le délice des sens_mini.jpg" alt="plats sur une table">
+                        <picture>
+                           <source media="(max-width: 768px)" srcset="images/restaurants/le_delice_mini.jpg">
+                           <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/le_delice_moyen.jpg">
+                           <source media="(min-width: 1440px)" srcset="images/restaurants/le_delice.jpg">
+                           <img src="images/restaurants/le_delice_moyen.jpg" alt="assiettes et verres sur une table">
+                        </picture> 
                         <figcaption>
                            <hgroup>
                               <h3>Le délice des sens</h3>
@@ -114,12 +135,12 @@
          <h3>ohmyfood</h3>
             <ul>
                <li>
-                  <i class="fa-solid fa-utensils"> Proposer un restaurant</i>
+                  <i class="fa-solid fa-utensils"></i><a href="#"> Proposer un restaurant</a>
                </li>
                <li>
-                  <i class="fa-solid fa-handshake-angle"> Devenir partenaire</i>
+                  <i class="fa-solid fa-handshake-angle"></i><a href="#"> Devenir partenaire</a>
                </li>
-               <li>Mentions légales</li>
+               <li><a href="#">Mentions légales</a></li>
                <li><a href="#">Contact</a></li>
             </ul>
       </footer>
