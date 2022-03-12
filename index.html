@@ -4,7 +4,6 @@
       <meta charset="utf-8" />
 
       <title>ohmyfood</title>
-      <!--meta utf8-->
 
       <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -34,29 +33,30 @@
                   <input placeholder="Paris, Belleville">
                </form>
             </div>
-         <hgroup>
-            <h2>Réservez le menu qui vous convient</h2>
-            <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
-         </hgroup>
-         <div>
-            <a href="#restaurants">Explorez nos restaurants</a>
-         </div>   
-
+            <div class="Réservez">
+               <hgroup>
+                  <h2>Réservez le menu qui vous convient</h2>
+                  <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+               </hgroup>
+               <div class="boutonExplorez">
+                  <a href="#restaurants">Explorez nos restaurants</a>
+               </div>   
+            </div>
       </header>
       <main>
          <section>
             <h2>Fonctionnement</h2>
-               <ol>
+               <ol class="fonctionnement">
                   <li><i class="fa-solid fa-mobile-screen-button"></i> Choisissez un restaurant</li>
                   <li><i class="fa-solid fa-list-ul"></i> Composez un menu</li>
                   <li><i class="fa-solid fa-store"></i> Dégustez au restaurant</li>
                </ol>
          </section>
-         <section>
-            <h2 id="restaurants">Restaurants</h2>
+         <section id="restaurants">
+            <h2>Restaurants</h2>
             <nav>
                <ul>
-                  <li>
+                  <li class="cartesDesRestos">
                      <a href="#">
                      <figure>
                         <picture>
@@ -75,13 +75,13 @@
                      </figure> 
                      </a>       
                   </li>
-                  <li>
+                  <li class="cartesDesRestos">
                      <figure>
                         <picture>
                            <source media="(max-width: 768px)" srcset="images/restaurants/la_note_mini.jpg">
                            <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_note_moyen.jpg">
                            <source media="(min-width: 1440px)" srcset="images/restaurants/la_note.jpg">
-                           <img src="images/restaurants/la_note_moyen.jpg" alt="assiettes et verres sur une table">
+                           <img class="noteEnchantee"  src="images/restaurants/la_note_moyen.jpg" alt="assiettes et verres sur une table">
                         </picture> 
                         <figcaption>
                            <hgroup>
@@ -92,7 +92,7 @@
                         </figcaption>     
                      </figure>          
                   </li> 
-                  <li>
+                  <li class="cartesDesRestos">
                      <figure>
                         <picture>
                            <source media="(max-width: 768px)" srcset="images/restaurants/la_francaise_mini.jpg">
@@ -109,7 +109,7 @@
                         </figcaption>     
                      </figure>           
                   </li>
-                  <li>
+                  <li class="cartesDesRestos">
                      <figure>
                         <picture>
                            <source media="(max-width: 768px)" srcset="images/restaurants/le_delice_mini.jpg">
