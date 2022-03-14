@@ -156,10 +156,11 @@ header h3 {
 	width: 90%;
 	padding-bottom: 30px;
 	color: grey;
+	font-weight: initial;
 }
 
-/*BOUTON EXPLOREZ*/
-.boutonExplorez {
+/*BOUTON EXPLOREZ ET BOUTON COMMANDEZ DANS MENUS*/
+.boutonExplorez, .boutonCommandez {
 	border-radius: 30px;
 	padding: 15px;
 	background: linear-gradient(-10deg, #9356DC, #FF79DA);
@@ -183,7 +184,7 @@ header a {
 /*SECTION FONCTIONNEMENT*/
 /*TITRE DE LA SECTION FONCTIONNEMENT*/
 main h2 {
-	padding: 50px 20px 20px 20px;
+	padding: 60px 20px 10px 20px;
 }
 /*VISIBILITE DES PUCES 1 2 3*/
 .fonctionnement {
@@ -191,9 +192,8 @@ main h2 {
 	padding-bottom: 40px;
 }
 
-.fonctionnement li{
-	border-radius: 20px;
-	padding: 25px;
+.fonctionnement li, .quatreMenus li {
+	border-radius: 18px;
 	background-color:  #f6f6f6;
 	opacity: 0.9;
 	font-size: 15px;
@@ -201,9 +201,14 @@ main h2 {
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 	margin: 20px;	
 }
+.fonctionnement li {
+	padding: 20px;
+}
+
 /*ICONES FONCTIONNEMENT*/
 .fonctionnement i {
 	padding-right: 20px;
+	font-size: 20px;
 }
 
 
@@ -211,11 +216,12 @@ main h2 {
 
 #restaurants {
 	background-color:#f6f6f6;
+	padding-bottom: 50px;
 }
 
 /*4 CARTES DES RESTOS*/
 .cartesDesRestos {
-	margin: 15px auto;
+	margin: 20px auto;
 	height: auto;
 	width: 90%;
 	max-width: 1000px;
@@ -223,8 +229,21 @@ main h2 {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	border-radius: 20px;
 	box-sizing: border-box;
-	
+	position: relative;
 }
+/*RECTANGLE NOUVEAU*/
+.nouveau {
+	background-color: #99E2D0;
+	color: #008766;
+	padding: 8px 12px;
+	font-size: 13px;
+	font-weight: bold;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+
 .cartesDesRestos img {
 	height: 170px;
 	width: 100%;
@@ -241,8 +260,137 @@ img.noteEnchantee {
 	padding: 15px;
 	color: black;
 }
-
+/*LEGENDE ET COEUR*/
 figcaption {
 	display: flex;
 	justify-content: space-between;
+}
+/*ICONE COEUR*/
+figcaption i {
+	font-size: 25px;
+	line-height: 2;
+	color: #353535;
+	padding-right: 20px;
+	padding-top: 15px;
+}
+
+/*FOOTER*/
+footer {
+	background-color:#353535 ;
+	color: #ffffff;
+	height: auto;
+	padding: 20px 20px 40px;
+}
+/*TITRE FOOTER*/
+footer h3 {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: initial;
+}
+/*ICONES FOOTER*/
+footer i {
+	font-size: small;
+	padding-right: 10px;
+}
+/*ESPACEMENT ENTRE LES LI*/
+footer li {
+	padding-top: 10px;
+}
+/*LIENS FOOTER*/
+footer a {
+	color: #ffffff;
+	font-size: 15px;
+}
+
+
+/*LES 4 MENUS*/
+
+/*HEADER*/
+/*FLECHE ET LOGO*/
+.bandeauHeaderMenu {
+	display: flex;
+	align-items: baseline;
+	padding-bottom: 5px;
+}
+
+.fa-arrow-left {
+	font-size: 22px;
+}
+
+/*COULEUR LIEN BOUTON RETOUR*/
+.lienHeaderMenu {
+	color: #353535;
+}
+
+/*H1 LOGO*/
+.logoHeaderMenu {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+/*MAIN*/
+
+.quatreMenus {
+	background-color:#f6f6f6 ;
+	/*border-radius: 15px 15px 0 0;*/
+}
+/*NOMS DES RESTAURANTS*/
+.quatreMenus h2 {
+	font-size: 28px;
+	font-family: 'Shrikhand', cursive;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+/*NOM DU RESTO ET COEUR*/
+.nomRestoEtCoeur {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+/*COEUR*/
+.fa-heart {
+	font-size: 25px;
+	color: #353535;
+	padding-right: 40px;
+}
+/*TITRES ENTREES PLATS DESSERTS*/
+.quatreMenus h3 {
+	text-transform: uppercase;
+	padding-left: 20px;
+	font-weight: initial;
+	padding-bottom: 0;
+}
+/*TITRES PRIX DES PLATS ET COCHES ALIGNES*/
+.quatreMenus li {
+	display: flex;
+	justify-content: space-between;
+	opacity: 0.8;	
+}
+
+/*NOMS DES PLATS HGROUP*/
+.quatreMenus hgroup {
+	width: 87%;
+	padding: 15px;
+}
+
+.quatreMenus h4 {
+	font-size: 18px;
+}
+.quatreMenus h5 {
+	padding-top: 5px;
+	font-weight: initial;
+}
+/*PRIX DES PLATS*/
+.quatreMenus p {
+	align-self: flex-end;
+	padding-bottom: 15px;
+}
+
+/*ICONES COCHES VERTES A DROITE*/
+.fa-circle-check {
+	padding: 25px 15px 0;
+	font-size: 22px;
+	background-color:#99E2D0;
+	color: #ffffff;
+	border-radius: 0 18px 18px 0;
 }
