@@ -1,10 +1,163 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <title>Menu-À la française</title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   <h1>À la française</h1>
-</body>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8" />
+      <title>Menu-À la française</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <!-- Fontawesome -->
+      <script src="https://kit.fontawesome.com/6655d3d964.js" crossorigin="anonymous"></script>
+
+      <!--Polices-->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+      
+      <!--Viewport: responsive-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <meta name="description" content="Choisir un restaurant gastronomique et composer son propre menu en ligne"/>
+   </head>
+   <body>
+      <header>
+         <div class="bandeauHeaderMenu">
+            <a class="lienHeaderMenu" href="index.html">
+               <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="logoHeaderMenu">ohmyfood</h1>
+         </div>
+         <div>
+            <picture>
+               <source media="(max-width: 768px)" srcset="images/restaurants/la_francaise_mini.jpg">
+               <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_francaise_moyen.jpg">
+               <source media="(min-width: 1440px)" srcset="images/restaurants/la_francaise.jpg">
+               <img src="images/restaurants/la_francaise_moyen.jpg" alt="assiettes et verres sur une table">
+            </picture> 
+         </div>
+      </header>
+      <main class="quatreMenus">
+         <div class="nomRestoEtCoeur">
+            <h2>À la française</h2>
+            <i class="fa-regular fa-heart"></i>
+         </div>
+         <section>
+            <h3>Entrées</h3>
+               <ul class="entrees">
+                  <li>
+                     <hgroup>
+                        <h4>Tartare de poulpe acidulé</h4>
+                        <h5>Aux zestes d'orange</h5>
+                     </hgroup>
+                     <p>25€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Velouté de légumes d'antan</h4>
+                        <h5>Carotte, panais, topinambour</h5>
+                     </hgroup>
+                     <p>35€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Soupe à l'oignon</h4>
+                        <h5>Revisitée</h5>
+                     </hgroup>
+                     <p>20€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section>
+         <section>
+            <h3>Plats</h3>
+               <ul class="plats">
+                  <li>
+                     <hgroup>
+                        <h4>Coquilles Saint-Jacques</h4>
+                        <h5>Accompagnées d'une purée de panais</h5>
+                     </hgroup>
+                     <p>40€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Magret de canard</h4>
+                        <h5>Et parmentier de pommes de terre</h5>
+                     </hgroup>
+                     <p>35€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                        <h5>Sur son lit de gnocchis aux légumes</h5>
+                     </hgroup>
+                     <p>44€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section>
+         <section>
+            <h3>Desserts</h3>
+               <ul class="desserts">
+                  <li>
+                     <hgroup>
+                        <h4>Pétales de violettes glacées</h4>
+                        <h5>Et purée de noisettes</h5>
+                     </hgroup>
+                     <p>18€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Fondant au chocolat</h4>
+                        <h5>Revisité</h5>
+                     </hgroup>
+                     <p>22€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Millefeuille croustillant</h4>
+                        <h5>Myrtilles et pâte d'amandes</h5>
+                     </hgroup>
+                     <p>23€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section> 
+         <div class="boutonCommandez">
+            <a href="#">Commandez</a>
+         </div> 
+      </main>
+      <footer>
+         <h3>ohmyfood</h3>
+            <ul>
+               <li>
+                  <i class="fa-solid fa-utensils"></i>
+                  <a href="#"> Proposer un restaurant</a>
+               </li>
+               <li>
+                  <i class="fa-solid fa-handshake-angle"></i>
+                  <a href="#"> Devenir partenaire</a>
+               </li>
+               <li>
+                  <a href="#">Mentions légales</a>
+               </li>
+               <li>
+                  <a href="#">Contact</a>
+               </li>
+            </ul>
+      </footer>
+   </body>
 </html>
