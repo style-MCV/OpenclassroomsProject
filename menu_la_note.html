@@ -1,10 +1,173 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <title>Menu-La note enchantée</title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   <h1>La note enchantée</h1>
-</body>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8" />
+      <title>Menu-La note enchantée</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <!-- Fontawesome -->
+      <script src="https://kit.fontawesome.com/6655d3d964.js" crossorigin="anonymous"></script>
+
+      <!--Polices-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+      
+      <!--Viewport: responsive-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <meta name="description" content="Choisir un restaurant gastronomique et composer son propre menu en ligne"/>
+
+   </head>
+   <body>
+      <header>
+         <div class="bandeauHeaderMenu">
+            <a class="lienHeaderMenu" href="index.html">
+               <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="logoHeaderMenu">ohmyfood</h1>
+         </div>
+         <div>
+            <picture>
+               <source media="(max-width: 768px)" srcset="images/restaurants/la_note_mini.jpg">
+               <source media="(min-width: 769px) and (max-width: 992px)" srcset="images/restaurants/la_note_moyen.jpg">
+               <source media="(min-width: 1440px)" srcset="images/restaurants/la_note.jpg">
+               <img src="images/restaurants/la_note_moyen.jpg" alt="assiettes et verres sur une table">
+            </picture> 
+         </div>
+      </header>
+      <main class="quatreMenus">
+         <div class="nomRestoEtCoeur">
+            <h2>La note enchantée</h2>
+            <i class="fa-regular fa-heart"></i>
+         </div>
+         <section>
+            <h3>Entrées</h3>
+               <ul class="entrees">
+                  <li>
+                     <hgroup>
+                        <h4>Ravioles de foie gras</h4>
+                        <h5>Accompagnées de leur crème de truffe</h5>
+                     </hgroup>
+                     <p>25€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Caviar osciètre</h4>
+                        <h5>Sur blini à la farine de blé noir</h5>
+                     </hgroup>
+                     <p>35€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Homard et espuma de potiron</h4>
+                        <h5>Mariné aux zestes d'orange</h5>
+                     </hgroup>
+                     <p>20€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Foie gras de canard cuit entier</h4>
+                        <h5>Confiture de figue et pain toasté</h5>
+                     </hgroup>
+                     <p>35€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section>
+         <section>
+            <h3>Plats</h3>
+               <ul class="plats">
+                  <li>
+                     <hgroup>
+                        <h4>Noix de coquilles Saint-Jacques</h4>
+                        <h5>Sur lit de purée de céleri-rave</h5>
+                     </hgroup>
+                     <p>40€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Langoustines poêlées</h4>
+                        <h5>Purée de patate douce</h5>
+                     </hgroup>
+                     <p>35€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Mijoté de queue de boeuf</h4>
+                        <h5>Et riz sauvage aux zestes de citron</h5>
+                     </hgroup>
+                     <p>44€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section>
+         <section>
+            <h3>Desserts</h3>
+               <ul class="desserts">
+                  <li>
+                     <hgroup>
+                        <h4>Macaron noisette et chocolat</h4>
+                        <h5>Glace au caramel brun et sel de Guérande</h5>
+                     </hgroup>
+                     <p>18€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Baba au rhum revisité</h4>
+                        <h5>Avec son coulis de citron</h5>
+                     </hgroup>
+                     <p>22€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+                  <li>
+                     <hgroup>
+                        <h4>Tarte au citron meringuée</h4>
+                        <h5>Destructurée</h5>
+                     </hgroup>
+                     <p>23€
+                     </p>
+                     <i class="fa-solid fa-circle-check"></i>
+                  </li>
+               </ul>
+         </section> 
+         <div class="boutonCommandez">
+            <a href="#">Commandez</a>
+         </div> 
+      </main>
+
+      <footer>
+         <h3>ohmyfood</h3>
+            <ul>
+               <li>
+                  <i class="fa-solid fa-utensils"></i>
+                  <a href="#"> Proposer un restaurant</a>
+               </li>
+               <li>
+                  <i class="fa-solid fa-handshake-angle"></i>
+                  <a href="#"> Devenir partenaire</a>
+               </li>
+               <li>
+                  <a href="#">Mentions légales</a>
+               </li>
+               <li>
+                  <a href="#">Contact</a>
+               </li>
+            </ul>
+      </footer>
+   </body>
 </html>
