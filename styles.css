@@ -65,12 +65,18 @@ body {
 }	
 
 /*LOADING SPINNER*/
+
 .loading {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	z-index: 9999999999;
-	overflow: hidden;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+}
+
+@keyframes loading { 
+	from{ opacity:0; } 
+	to{ opacity:1; }
 }
 
 .loader {
@@ -79,13 +85,10 @@ body {
 	border-bottom: 3em solid #99E2D0;
 	border-left: 3em solid #9356DC;
 	animation: spin 2s linear infinite;
-}
-
-.loader {
+	-webkit-animation: spin 2s linear infinite;
 	border-radius: 50%;
 	width: 13em;
 	height: 13em;
-	display: block;
 	position: absolute;
 	top: 27%;
 	left: 9%;
@@ -93,9 +96,39 @@ body {
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); transition-duration: 3s; opacity:0;}
 }
 
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+/* TESTS SPINNER LOADING
+
+.loading :active {
+	opacity: 0;
+}
+*/
+/*  
+@keyframes loading { 
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
+}
+
+@-webkit-keyframes loading {
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
+}  
+
+.loading {
+	display: none;
+}
+
+body {
+	  display: none;
+}
+*/  
+	
 
 /*HEADER*/
 
@@ -201,22 +234,13 @@ header h3 {
 	font-size: 15px;
 	cursor: pointer;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-	/*box-shadow: 0 0 15px -10px #000;
-  	transition: ease 1s;*/
 }
 
-
-/*SURVOL DES CARTES
-#carte figure:hover
-{ 
-  background-color: #deebff;
-  opacity: 0.9;
-  border: 3.5mm ridge #0065FC;
-  border-radius: 35px;
-  cursor: pointer;
+.boutonExplorez:hover, .boutonCommandez:hover {
+	opacity: 0.7;
+	transition: ease 1s;
+	box-shadow: 10px 10px #99E2D0;
 }
-*/
-
 
 /*TOUS LES LIENS NON SOULIGNES*/
 a {
@@ -240,21 +264,40 @@ main h2 {
 .fonctionnement {
 	padding-left: 10px;
 	padding-bottom: 40px;
+	position: relative;
 }
 
 .fonctionnement li, .quatreMenus li {
-	border-radius: 18px;
+	border-radius: 20px;
 	background-color:  #f6f6f6;
 	opacity: 0.9;
 	font-size: 15px;
 	font-weight: bold;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 	margin: 20px;	
+	list-style-type: none;
+}
+
+.fonctionnement span {
+	font-size: 20px;
+	color: #9356DC;
+	font-weight: lighter;
+	position: absolute;
+	left: 16px;
+	background-color: #f6f6f6;
 }
 
 .fonctionnement li {
-	padding: 20px;
+	padding: 20px 20px 20px 35px;
+	cursor: pointer;
 }
+
+.fonctionnement i:hover {
+	opacity: 1;
+	color: #9356DC;
+	background-color: #FF79DA;
+}
+
 
 /*ICONES FONCTIONNEMENT*/
 .fonctionnement i {
@@ -320,14 +363,93 @@ figcaption {
 	justify-content: space-between;
 }
 
-/*ICONE COEUR*/
-figcaption i {
+/*ICONES COEUR ACCUEIL ET MENU*/
+figcaption i, .quatreMenus .fa-heart {
 	font-size: 25px;
-	line-height: 2;
 	color: #353535;
+	cursor: pointer;
+}
+
+/*ICONE COEUR ACCUEIL*/
+figcaption i {
+	line-height: 2;
 	padding-right: 20px;
 	padding-top: 15px;
 }
+/*RECHERCHES REMPLISSAGE COEURS	
+.contenant {
+    width: 100px;
+    height: 200px;
+    display: block;
+    background-color: #303030;
+    position: relative;
+}
+
+/* Remplissage de bas en haut 
+.contenu {
+    transition: all 0.3s linear 0s;
+    background-color: #33BEE5;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+ 
+.contenant:hover .contenu {
+    height: 100%;
+}
+*/
+
+/*.fa-heart:active {
+	color: #9356DC;
+
+}*/
+/*.fa-heart {
+    background:-webkit-linear-gradient(top,#FF79DA 30%,#9356DC 70%);
+    background-clip:content;
+    -webkit-background-clip:content;
+    color:transparent;
+}*/
+
+.fa-heart {
+	/*
+	background-image:linear-gradient(#99E2D0, #FF79DA, #9356DC);*/
+	background-image:linear-gradient(to top, transparent);
+	/*background:-webkit-linear-gradient(top,#FF79DA 30%,#9356DC 70%);*/
+    background-clip:content-box;
+    -webkit-background-clip:content-box;
+	border-radius: 70%;
+	/*opacity: 2;*/
+	transition-property: height;
+	transition-property: width;
+	transition: width 5s;
+  	transition-timing-function: linear;
+}
+
+.fa-heart:active {
+	background-image:linear-gradient(to top, #FF79DA 20%, #9356DC 80%, transparent);
+	height: 100%;
+	width: 100%;
+	
+}
+
+/*
+.fa-heart {
+	animation: fa-spin 1s infinite steps(8);
+}
+
+
+@keyframes fa-heart {
+	0% {
+		transform: rotate(0deg);
+	  }
+	  100% {
+		transform: rotate(1turn);
+	  }
+}
+*/
+
 
 /*FOOTER*/
 footer {
@@ -335,6 +457,7 @@ footer {
 	color: #ffffff;
 	height: auto;
 	padding: 20px 20px 40px;
+	margin-top: -50px;
 }
 
 /*TITRE FOOTER*/
@@ -373,6 +496,7 @@ footer a {
 
 .headerImage img {
 	width: 100%;
+	height: 250px;
 	object-fit: cover;
 }
 
@@ -401,7 +525,7 @@ footer a {
 
 /*MAIN*/
 
-/*HEADER ET MAIN SE CHEVAUCHANT*/
+/*TESTS HEADER ET MAIN SE CHEVAUCHANT*/
 /*
 .headerMenus {
 	position: absolute;
@@ -431,10 +555,8 @@ footer a {
 	align-items: baseline;
 }
 
-/*COEUR*/
-.fa-heart {
-	font-size: 25px;
-	color: #353535;
+/*ICONE COEUR MENUS*/
+.quatreMenus .fa-heart {
 	padding-right: 40px;
 }
 
@@ -443,9 +565,14 @@ footer a {
 	text-transform: uppercase;
 	padding-left: 20px;
 	font-weight: initial;
-	padding-bottom: 0;
 	font-size: 17px;
+	border-bottom: 5px solid #99E2D0;
 }
+
+.quatreMenus h3 {
+	width: 10%;
+}
+
 
 /*TITRES PRIX DES PLATS ET COCHES ALIGNES*/
 .quatreMenus li {
@@ -469,8 +596,9 @@ footer a {
 	padding-top: 5px;
 	font-weight: initial;
 	font-size: 14px;
-	/*text-overflow: ellipsis;
-	overflow: hidden;*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 /*PRIX DES PLATS*/
@@ -506,3 +634,122 @@ footer a {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+ /*MEDIA QUERIES*/
+ /*VERSION TABLETTE*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+.loader {
+	border-top: 6em solid #FF79DA;
+	border-right: 6em solid #9356DC ;
+	border-bottom: 6em solid #99E2D0;
+	border-left: 6em solid #9356DC;
+	width: 26em;
+	height: 26em;
+	top: 10%;
+	left: 15%;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.formulaire input, form, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
+	font-size: 30px;
+}
+
+.boutonExplorez, .boutonCommandez {
+	padding: 25px;
+}
+
+header h2, header h3 {
+  width: 100%;
+}
+
+h2, .quatreMenus h2 {
+  font-size: 35px;
+}
+
+main h2 {
+	padding: 60px 20px 10px 50px;
+}
+
+.fonctionnement li {
+  padding: 40px;
+}
+
+.fonctionnement li, .quatreMenus li {
+	font-size: 25px;
+	margin:40px;
+}
+
+.fonctionnement i {
+	padding-right: 40px;
+	font-size: 40px;
+}
+
+.cartesDesRestos {
+	width: 80%;
+}
+
+.cartesDesRestos img {
+	height: 400px;
+	object-position: center;
+}	
+
+h4, .quatreMenus h4, .quatreMenus h5 {
+	font-size: 25px;
+}
+
+figcaption i, .quatreMenus .fa-heart {
+	font-size: 40px;
+}
+
+footer ul {
+	display: flex;
+	width: 100%;
+}
+footer li {
+	display: flex;
+	padding-left: 20px;
+}
+
+footer h3 {
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+footer i {
+	font-size: x-large;
+	padding-right: 10px;
+}
+
+footer a {
+	font-size: 20px;
+	line-height: 2;
+}
+
+/*4 MENUS*/
+
+.headerImage img {
+	height: 350px;
+}
+
+.quatreMenus h3 {
+	width: 20%;
+	padding-left: 40px;
+}
+.quatreMenus li {
+	height: 95px;
+}
+
+}
+
+
+/*
+@media screen and (min-width: 992px){
+
+	body {
+}
+*/
