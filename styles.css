@@ -72,11 +72,21 @@ body {
 	height: 100%;
 	animation-duration: 3s;
 	-webkit-animation-duration: 3s;
+	animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-name: loading;
+    -webkit-animation-name: loading;
+	transform: translateY(-550px);
+	z-index: 1;
+	background:#ffffff;
+	opacity: 0;
 }
 
 @keyframes loading { 
-	from{ opacity:0; } 
-	to{ opacity:1; }
+	0%{ opacity:1; transform: translateY(0px);} 
+	90%{ opacity: 1;transform: translateY(0px);} 
+    99%{ transform: translateY(0px);}
+	100%{ opacity:0; transform: translateY(0px);}
 }
 
 .loader {
@@ -84,8 +94,8 @@ body {
 	border-right: 3em solid #9356DC ;
 	border-bottom: 3em solid #99E2D0;
 	border-left: 3em solid #9356DC;
-	animation: spin 2s linear infinite;
-	-webkit-animation: spin 2s linear infinite;
+	animation: spin 3s linear infinite;
+	-webkit-animation: spin 3s linear infinite;
 	border-radius: 50%;
 	width: 13em;
 	height: 13em;
@@ -96,7 +106,7 @@ body {
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); transition-duration: 3s; opacity:0;}
+    100% { transform: rotate(360deg); transition-duration: 1s; opacity:0;}
 }
 
 @-webkit-keyframes spin {
@@ -368,6 +378,8 @@ figcaption i, .quatreMenus .fa-heart {
 	font-size: 25px;
 	color: #353535;
 	cursor: pointer;
+	/*font-weight: bold;
+	color: #9356DC;*/
 }
 
 /*ICONE COEUR ACCUEIL*/
@@ -609,7 +621,20 @@ footer a {
 }
 
 /*ICONES COCHES VERTES A DROITE*/
-.fa-circle-check {
+/*.fa-circle-check {
+	padding: 25px 15px 0;
+	font-size: 22px;
+	background-color:#99E2D0;
+	color: #ffffff;
+	border-radius: 0 18px 18px 0;
+	cursor: pointer;
+}*/
+
+.quatreMenus section i {
+	display: none;
+}
+
+.quatreMenus li:active {
 	padding: 25px 15px 0;
 	font-size: 22px;
 	background-color:#99E2D0;
@@ -617,10 +642,6 @@ footer a {
 	border-radius: 0 18px 18px 0;
 	cursor: pointer;
 }
-
-/*i.fa-circle-check {
-	display: none;
-}*/
 
 /*BOUTON COMMANDEZ*/
 .boutonCommandez {
