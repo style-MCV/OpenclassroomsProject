@@ -114,7 +114,7 @@ body {
 	100% { -webkit-transform: rotate(360deg); }
 }
 
-
+/*https://i.pinimg.com/474x/8d/d1/3c/8dd13c382ce5a4b6044571a0d50bc9bc.jpg*/
 /*HEADER*/
 
 header {
@@ -285,6 +285,7 @@ main h2 {
 /*COULEURS TROISIEME LI DE FONCTIONNEMENT*/
 .fonctionnement li:nth-child(3) {
 	background-color: #f2eafb;
+	cursor: pointer;
 }
 
 .fonctionnement li:nth-child(3) .fa-store {
@@ -400,11 +401,52 @@ figcaption i {
     height: 100%;
 }
 */
+.fa-solid.fa-heart {
+	-webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+	transition: 3s;
+	-webkit-transition: 3s;
+}
 
-/*.fa-heart:active {
-	color: #9356DC;
+.fa-solid.fa-heart:hover, .fa-solid.fa-heart:hover:active{
+	-webkit-text-fill-color: #9356DC;
+    -webkit-text-stroke-width: 0;
 
-}*/
+}
+
+
+
+/* MODIF  29/03
+.fa-solid.fa-heart {
+	-webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 2px;
+	transition: 3s;
+	-webkit-transition: 3s;
+	transition: width 5s;
+    transition-timing-function: linear;
+}
+
+
+}
+.fa-solid.fa-heart:hover {
+	-webkit-text-fill-color: #9356DC;
+    -webkit-text-stroke-width: 0;
+
+}
+
+.fa-solid.fa-heart {
+    text-shadow: 0 0 3px #000;
+    color: #fff;
+}
+
+.fa-heart:before {
+    content: "\f004";
+}
+*/
+
+
 /*.fa-heart {
     background:-webkit-linear-gradient(top,#FF79DA 30%,#9356DC 70%);
     background-clip:content;
@@ -415,22 +457,20 @@ figcaption i {
 .fa-heart {
 	/*
 	background-image:linear-gradient(#99E2D0, #FF79DA, #9356DC);*/
-	background-image:linear-gradient(to top, transparent);
+	/*background-image:linear-gradient(to top, transparent);*/
 	/*background:-webkit-linear-gradient(top,#FF79DA 30%,#9356DC 70%);*/
     background-clip:text;
     -webkit-background-clip:text;
 	border-radius: 70%;
 	/*opacity: 2;*/
-	transition-property: height;
-	transition-property: width;
+	/*transition-property: height;
+	transition-property: width;*/
 	transition: width 5s;
   	transition-timing-function: linear;
 }
 
 .fa-heart:active {
 	background-image:linear-gradient(to top, #FF79DA 20%, #9356DC 80%, transparent);
-	height: 100%;
-	width: 100%;
 	
 }
 
@@ -439,11 +479,13 @@ figcaption i {
 	animation: fa-spin 1s infinite steps(8);
 }
 
-
+*/
+/*
 @keyframes fa-heart {
 	0% {
 		transform: translateY(0);
 	  }
+	  
 	100% {
 		transform: translateY(100%) linear-gradient(to top, #FF79DA 20%, #9356DC 80%, transparent);
 	  }
@@ -601,8 +643,11 @@ white-space: nowrap;
 
 /*PRIX DES PLATS*/
 .quatreMenus p {
-	align-self: flex-end;
-	padding-bottom: 5px;
+	/*align-self: flex-end;*/
+	padding-bottom: 10px;
+	width: 23%;
+	text-align: right;
+	padding-right: 10px;
 }
 
 
@@ -688,8 +733,8 @@ white-space: nowrap;
 	cursor: pointer;
 	position: absolute;
 	top: 0;
-	right: -90px;
-	width: 60px;
+	right: -100px;
+	width: 70px;
 	height: 100%;
 	display: flex;
 	justify-content: left;
@@ -734,11 +779,11 @@ white-space: nowrap;
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 45px;
 }
 
 .formulaire input, form, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
-	font-size: 30px;
+	font-size: 25px;
 }
 
 .boutonExplorez, .boutonCommandez {
@@ -750,7 +795,7 @@ header h2, header h3 {
 }
 
 h2, .quatreMenus h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 main h2 {
@@ -791,7 +836,10 @@ figcaption i, .quatreMenus .fa-heart {
 footer ul {
 	display: flex;
 	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
+
 footer li {
 	display: flex;
 	padding-left: 10px;
@@ -801,15 +849,18 @@ footer li {
 footer h3 {
 	font-size: 30px;
 	padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
 }
 
 footer i {
 	font-size: x-large;
 	padding-right: 10px;
+	padding-top: 10px;
 }
 
 footer a {
-	font-size: 20px;
+	font-size: 25px;
 	line-height: 2;
 }
 
@@ -827,12 +878,255 @@ footer a {
 	height: 95px;
 }
 
+figcaption i {
+	padding-right: 50px;
+	padding-top: 20px;
+  }
+
 }
 
+/*VERSION DESKTOP*/
 
-/*
 @media screen and (min-width: 992px){
 
-	body {
+body {
+		max-width: 1600px;
+
 }
-*/
+
+.loader {
+	border-top: 7em solid #FF79DA;
+	border-right: 7em solid #9356DC ;
+	border-bottom: 7em solid #99E2D0;
+	border-left: 7em solid #9356DC;
+	width: 28em;
+	height: 28em;
+	top: 20%;
+	left: 25%;
+}
+
+/*LOGO*/
+h1 {
+	font-size: 50px;
+}
+
+/*FORMULAIRE*/
+.formulaire {
+	border: 30px solid #eaeaea;
+}
+
+.formulaire input, form, .fa-map-marker-alt, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
+	font-size: 30px;
+}
+
+form {
+	display: flex;
+	width: 21%;
+}
+/*BOUTONS*/
+.boutonExplorez, .boutonCommandez {
+	padding: 25px;
+}
+
+header h2, header h3 {
+  width: 100%;
+}
+
+h2, .quatreMenus h2 {
+  font-size: 35px;
+}
+
+#restaurants h2 {
+	text-transform: uppercase;
+	font-size: 45px;
+	position: relative;
+}
+
+/*LIGNE VERTE SOUS TITRE RESTAURANTS*/
+#restaurants h2::after {
+	content: "";
+	background-color: #99E2D0;
+	height: 7px;
+	width: 150px;
+	position: absolute;
+	bottom: 20px;
+	left: 700px;
+}
+
+
+main h2 {
+	padding: 60px 20px 40px 50px;
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+}
+
+.fonctionnement {
+	display: grid;
+	width: 50%;
+	margin-left: 400px
+}
+
+.fonctionnement li {
+	padding: 40px 40px 40px 90px;
+}
+.fonctionnement li:hover {
+	background-color: #f2eafb;
+	cursor: pointer;
+}
+
+.fonctionnement li, .quatreMenus li {
+	font-size: 30px;
+	margin: 20px;
+}
+
+.fonctionnement span {
+	font-size: 27px;
+}
+
+.fonctionnement i {
+	padding-right: 40px;
+	font-size: 40px;
+}
+
+.fonctionnement i:hover {
+	color: #9356DC;
+}
+
+#restaurants ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+
+.cartesDesRestos {
+	width: 47%;
+}
+
+.cartesDesRestos img {
+	height: 400px;
+	object-position: center;
+}	
+
+.nouveau {
+	font-size: 30px;
+	padding: 10px 15px;
+	top: 20px;
+	right: 20px;
+}
+
+h4, .quatreMenus h4, .quatreMenus h5 {
+	font-size: 25px;
+}
+
+figcaption i, .quatreMenus .fa-heart {
+	font-size: 45px;
+}
+
+.fa-solid.fa-heart {
+	padding-right: 60px;
+	padding-top: 20px;
+}
+
+footer {
+	padding: 50px;
+}
+
+footer ul {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+footer li {
+	display: flex;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+footer h3 {
+	font-size: 40px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+footer i {
+	font-size: x-large;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+footer a {
+	font-size: 30px;
+	line-height: 1.5;
+}
+
+/*4 MENUS*/
+
+.fa-arrow-left {
+	font-size: 40px;
+}
+
+.headerImage img {
+	height: 480px;
+}
+
+.quatreMenus h2 {
+	text-transform: uppercase;
+}
+
+.quatreMenus .fa-solid.fa-heart {
+	padding-right: 130px;
+	padding-top: 40px;
+}
+
+.quatreMenus h3 {
+	width: 20%;
+	padding-left: 90px;
+}
+
+.quatreMenus h3::after {
+	left: 90px;
+	height: 6px;
+	width: 75px;
+	bottom: -8px;
+}
+
+
+.quatreMenus ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.quatreMenus li {
+	height: 105px;
+	width: 40%;
+}
+
+.quatreMenus hgroup {
+	padding-left: 10px;
+}
+
+
+.quatreMenus h5 {
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+
+.quatreMenus p {
+	text-align: center;
+}
+
+figcaption i {
+	padding-right: 50px;
+	padding-top: 20px;
+  }
+
+
+}
