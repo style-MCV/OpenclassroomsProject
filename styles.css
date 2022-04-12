@@ -194,6 +194,7 @@ h3 {
 	padding-bottom: 5px;
 }
 
+
 header hgroup {
 	display: flex;
 	flex-direction: column;
@@ -247,7 +248,7 @@ header a {
 /*SECTION FONCTIONNEMENT*/
 /*TITRE DE LA SECTION FONCTIONNEMENT*/
 main h2 {
-	padding: 60px 20px 10px 20px;
+	padding: 40px 20px 10px 20px;
 }
 
 /*VISIBILITE DES PUCES 1 2 3*/
@@ -269,16 +270,32 @@ main h2 {
 }
 
 .fonctionnement span {
+	/*ancien
 	font-size: 20px;
 	color: #9356DC;
 	font-weight: lighter;
 	position: absolute;
 	left: 16px;
 	background-color: transparent;
+	html: &#10102;
+	&#10103;
+	&#10104;*/
+
+	font-size: 17px;
+	color: #fff;
+	font-weight: lighter;
+	position: absolute;
+	left: 20px;
+	background-color: #9356DC;
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 140%;
 }
 
 .fonctionnement li {
-	padding: 20px 20px 20px 35px;
+	padding: 25px 20px 25px 35px;
 }
 
 /*ICONES FONCTIONNEMENT*/
@@ -300,7 +317,7 @@ main h2 {
 
 #restaurants {
 	background-color:#f6f6f6;
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 }
 
 /*4 CARTES DES RESTOS*/
@@ -347,6 +364,9 @@ img.noteEnchantee {
 	color: black;
 }
 
+.cartesDesRestos h4 {
+	font-size: 17px;
+}
 
 /*LEGENDE ET COEUR*/
 figcaption {
@@ -355,111 +375,85 @@ figcaption {
 }
 
 /*ICONES COEUR ACCUEIL ET MENU*/
-figcaption i, .quatreMenus .fa-heart {
-	font-size: 25px;
-	color: #353535;
-	cursor: pointer;
+
+::before, ::after {
+	box-sizing: border-box;
+}
+
+figcaption {
 	position: relative;
-	z-index: 1;
 }
 
-
-/*ICONE COEUR ACCUEIL*/
-figcaption i {
-	line-height: 2;
-	padding-right: 20px;
-	padding-top: 15px;
+.fa-solid.fa-heart {
+	font-weight: 400;
 }
 
-.fa-heart {
-	-webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
-	transition: 3s;
-	-webkit-transition: 3s;
-
+#coeurRempli:active::before {
+	opacity: 1;
+	animation:progress-bar 3s linear 1s backwards;
 }
 
-.fa-heart:hover, .fa-heart:active {
-	-webkit-text-fill-color: #9356DC;
-    -webkit-text-stroke-width: 0;
-	/*transform-origin: bottom;
-	transform: scaleX(0.5);
-    animation: progress-bar 1000ms 1000ms;
-	animation-fill-mode: forwards;*/
+#coeurRempli::before {
+	content: "";
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(#FF79DA, #9356DC);
+	opacity: 0;
+}
+
+#coeurRempli {
+	height: 65px;
+	width: 35px;
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	border:transparent 0px solid;
+	background-color: transparent/*noir*/;
+	cursor: pointer;
+}
+
+#coeurRempli:active .plein {
+	opacity: 0;
 	
 }
 
-.fa-heart {
-	/*
-	background-image:linear-gradient(#99E2D0, #FF79DA, #9356DC);*/
-	/*background-image:linear-gradient(to top, transparent);*/
-	/*background:-webkit-linear-gradient(top,#FF79DA 30%,#9356DC 70%);*/
-    background-clip:text;
-    -webkit-background-clip:text;
-	border-radius: 70%;
-	/*opacity: 2;*/
-	/*transition-property: height;
-	transition-property: width;*/
-	transition: width 5s;
-  	transition-timing-function: linear;
+#coeurRempli .fa-heart {
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	font-size: 25px;
+	mix-blend-mode: luminosity;/*border couleur*/
+	transition: all 0.3s ease;
+	background-color: transparent;
 }
 
-
-/*
-.btn {
-    &:active {
-        & > .progress__bar {
-            animation: progress-bar 1000ms;
-        }
-    }
+.quatreMenus #coeurRempli .fa-heart {
+	top: 40px;
 }
+
 @keyframes progress-bar {
-    0% {
-        transform: scaleX(0);
+	0% {
+        transform: translateY(40px);
+		opacity: 0;
     }
     17% {
-        transform: scaleX(.18);
+        transform: translateY(30px);
     }
     24% {
-        transform: scaleX(.4);
+        transform: translateY(20px);
     }
     46% {
-        transform: scaleX(.81);
+        transform: translateY(10px);
     }
     100% {
-        transform: scaleX(1);
+        transform: translateY(0px);
     }
-}
-*/
-/* MODIF  29/03
-.fa-solid.fa-heart {
-	-webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 2px;
-	transition: 3s;
-	-webkit-transition: 3s;
-	transition: width 5s;
-    transition-timing-function: linear;
-}
+  }
 
-
-}
-.fa-solid.fa-heart:hover {
-	-webkit-text-fill-color: #9356DC;
-    -webkit-text-stroke-width: 0;
-
-}
-
-.fa-solid.fa-heart {
-    text-shadow: 0 0 3px #000;
-    color: #fff;
-}
-
-.fa-heart:before {
-    content: "\f004";
-}
-*/
 
 /*FOOTER*/
 footer {
@@ -603,7 +597,7 @@ footer a {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: initial;
-	font-size: 14px;
+	font-size: 15px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -611,11 +605,9 @@ footer a {
 
 /*PRIX DES PLATS*/
 .quatreMenus p {
-	/*align-self: flex-end;*/
 	padding-bottom: 10px;
 	width: 23%;
-	text-align: right;
-	padding-right: 10px;
+	text-align: center;
 }
 
 
@@ -633,6 +625,8 @@ footer a {
   	animation-fill-mode: none;
 	animation-fill-mode: forwards;
 	padding: 10px 0px 10px 12px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .quatreMenus li:nth-of-type(1) {
@@ -675,7 +669,7 @@ footer a {
 }
 
 .quatreMenus li:active .boxCheck {
-	transform: translateX(-60px);
+	transform: translateX(-70px);
 	
 }
 
@@ -691,7 +685,7 @@ footer a {
 }
 
 .boxCheck {
-	padding: 0px 15px 0;
+	padding: 0px;
 	font-size: 22px;
 	background-color:#99E2D0;
 	color: #ffffff;
@@ -699,11 +693,11 @@ footer a {
 	cursor: pointer;
 	position: absolute;
 	top: 0;
-	right: -100px;
+	right: -70px;
 	width: 70px;
 	height: 100%;
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: center;
 	transition: all 0.3s ease;
 
@@ -715,7 +709,7 @@ footer a {
 
 /*BOUTON COMMANDEZ*/
 .boutonCommandez {
-	margin: 60px 80px 70px;
+	margin: 50px 90px 50px;
 }
 
 .boutonCommandez a {
@@ -724,6 +718,7 @@ footer a {
 	justify-content: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	font-size: 16px;
 }
 
 
@@ -741,29 +736,40 @@ footer a {
 	border-left: 6em solid #9356DC;
 	width: 26em;
 	height: 26em;
-	top: 10%;
-	left: 15%;
+	top: 5%;
+	left: 10%;
 	background-size: 500px;
 }
 
 h1 {
-	font-size: 45px;
+	font-size: 35px;
 }
 
+.formulaire {
+	padding-left: 140px;
+}
 .fa-arrow-left {
 	font-size: 30px;
 }
 
+.Réservez, header h3 {
+	padding-bottom: 20px;
+}
+
 .formulaire input, form, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .boutonExplorez, .boutonCommandez {
-	padding: 25px;
+	padding: 17px;
 }
 
 .boutonCommandez {
 	margin: 60px 160px 50px;
+}
+
+header h2 {
+	padding-top: 20px;
 }
 
 header h2, header h3 {
@@ -771,26 +777,32 @@ header h2, header h3 {
 }
 
 h2, .quatreMenus h2 {
-  font-size: 30px;
+  font-size: 27px;
 }
 
 main h2 {
-	padding: 60px 20px 10px 50px;
+	padding: 10px 20px 0px 50px;
+	font-family: 'Shrikhand', cursive;
+}
+
+.fonctionnement {
+	padding-bottom: 0;
 }
 
 .fonctionnement li {
-  padding: 40px;
+  padding: 20px 10px 20px 70px;
 }
 
 .fonctionnement li, .quatreMenus li {
-	font-size: 25px;
-	margin:40px;
+	font-size: 22px;
+	margin: 15px 40px;
 }
 
 .fonctionnement span {
-	font-size: 30px;
+	font-size: 25px;
 	left: 30px;
-	line-height: initial;
+	width: 40px;
+	height: 40px;
 }
 
 
@@ -798,22 +810,53 @@ main h2 {
 	padding-right: 40px;
 	font-size: 40px;
 }
+#restaurants {
+	padding-bottom: 70px;
+}
 
+#restaurants ul {
+	display: flex;
+	flex-wrap: wrap;
+}
 .cartesDesRestos {
-	width: 80%;
+	width: 45%;
 }
 
 .cartesDesRestos img {
-	height: 400px;
+	height: 200px;
 	object-position: center;
 }	
 
 h4, .quatreMenus h4, .quatreMenus h5 {
-	font-size: 25px;
+	font-size: 23px;
 }
 
-figcaption i, .quatreMenus .fa-heart {
-	font-size: 40px;
+#coeurRempli .fa-heart {
+	font-size: 30px;
+}
+
+#coeurRempli:active::before {
+	opacity: 1;
+	animation:progress-bar 3s linear 1s backwards;
+}
+
+#coeurRempli:active .plein {
+	opacity: 0;
+	
+}
+
+.cartesDesRestos #coeurRempli .fa-heart {
+	top: 20px;
+	left: 0px;
+}
+
+.nomRestoEtCoeur #coeurRempli .fa-heart {
+	top: 50px;
+	left: -30px;
+}
+
+.nomRestoEtCoeur #coeurRempli::before {
+	left: -30px;
 }
 
 footer ul {
@@ -850,21 +893,56 @@ footer a {
 /*4 MENUS*/
 
 .headerImage img {
-	height: 350px;
+	height: 150px;
 }
 
 .quatreMenus h3 {
 	width: 20%;
 	padding-left: 40px;
 }
-.quatreMenus li {
-	height: 95px;
+
+.quatreMenus h3::after {
+	content: "";
+	background-color: #99E2D0;
+	height: 5px;
+	width: 60px;
+	position: absolute;
+	bottom: -5px;
+	left: 40px;
 }
 
-figcaption i {
+.quatreMenus li {
+	height: 75px;
+	margin: 35px;
+}
+
+.quatreMenus li:active {
+	padding: 16px 80px 16px 12px;
+	cursor: pointer;
+}
+
+.quatreMenus li:active .boxCheck {
+	transform: translateX(-110px);
+}
+
+.boxCheck {
+	font-size: 22px;
+	right: -110px;
+	width: 110px;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.boxCheck i {
+	font-size: 30px;
+}
+
+/*figcaption i {
 	padding-right: 50px;
 	padding-top: 20px;
-  }
+  }*/
 
 }
 
@@ -880,29 +958,31 @@ body {
 }
 
 .loader {
-	border-top: 7em solid #FF79DA;
-	border-right: 7em solid #9356DC ;
-	border-bottom: 7em solid #99E2D0;
-	border-left: 7em solid #9356DC;
+	border-top: 6em solid #FF79DA;
+	border-right: 6em solid #9356DC ;
+	border-bottom: 6em solid #99E2D0;
+	border-left: 6em solid #9356DC;
 	width: 28em;
 	height: 28em;
-	top: 20%;
-	left: 25%;
+	top: 10%;
+	left: 30%;
 	background-size: 600px;
 }
 
+/*HEADER*/
 /*LOGO*/
 h1 {
-	font-size: 50px;
+	font-size: 40px;
 }
 
 /*FORMULAIRE*/
 .formulaire {
-	border: 30px solid #eaeaea;
+	border: 10px solid #eaeaea;
+	padding-left: 100px;
 }
 
 .formulaire input, form, .fa-map-marker-alt, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
-	font-size: 30px;
+	font-size: 25px;
 }
 
 form {
@@ -910,27 +990,109 @@ form {
 	width: 21%;
 }
 
-/*BOUTONS*/
-.boutonExplorez, .boutonCommandez {
-	padding: 30px;
+.Réservez {
+	padding-bottom: 25px;
 }
 
-.boutonCommandez {
-	margin: 40px 380px 60px;
+header h2 {
+	padding-top: 20px;
 }
-
 
 header h2, header h3 {
   width: 100%;
 }
 
+header h3 {
+	padding-bottom: 20px;
+}
+
 h2, .quatreMenus h2 {
-  font-size: 35px;
+  font-size: 30px;
+}
+
+/*BOUTONS*/
+.boutonExplorez, .boutonCommandez {
+	padding: 18px;
+}
+
+.boutonCommandez {
+	margin: 20px 480px 30px;
+}
+
+/*MAIN*/
+
+/*FONCTIONNEMENT 123*/
+
+
+main h2 {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	font-size: 27px;
+	position: relative;
+	font-family:'Shrikhand', cursive;
+}
+
+main h2::after {
+	content: "";
+	background-color: #99E2D0;
+	height: 7px;
+	width: 100px;
+	position: absolute;
+	bottom: 0px;
+	left: 700px;
+  }
+
+
+
+
+.fonctionnement {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 10px;
+}
+
+.fonctionnement li {
+	padding: 20px 20px 20px 0px;
+	margin-left: 0;
+}
+
+.fonctionnement li, .quatreMenus li {
+	font-size: 25px;
+
+}
+.quatreMenus li {
+	margin: 10px;
+}
+
+.fonctionnement span {
+	font-size: 25px;
+	display: inline-block;
+	line-height: inherit;
+	margin-right: 20px;
+	margin-left: -15px;
+	position: inherit;
+}
+
+.fonctionnement i {
+	padding-right: 10px;
+	font-size: 30px;
+}
+
+.fonctionnement i:hover {
+	color: #9356DC;
+}
+
+
+/*RESTAURANTS*/
+
+#restaurants {
+	padding-bottom: 70px;
 }
 
 #restaurants h2 {
 	text-transform: uppercase;
-	font-size: 45px;
+	font-size: 27px;
 	position: relative;
 }
 
@@ -939,89 +1101,70 @@ h2, .quatreMenus h2 {
 	content: "";
 	background-color: #99E2D0;
 	height: 7px;
-	width: 150px;
+	width: 100px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 0px;
 	left: 700px;
 }
 
 
-main h2 {
-	padding: 60px 20px 40px 50px;
-	display: flex;
-	justify-content: center;
-	font-size: 40px;
-}
-
-.fonctionnement {
-	display: grid;
-	width: 50%;
-	margin-left: 400px
-}
-
-.fonctionnement li {
-	padding: 40px 40px 40px 90px;
-}
-
-
-.fonctionnement li, .quatreMenus li {
-	font-size: 30px;
-	margin: 20px;
-}
-
-.fonctionnement span {
-	font-size: 30px;
-	left: 12px;
-}
-
-.fonctionnement i {
-	padding-right: 40px;
-	font-size: 40px;
-}
-
-.fonctionnement i:hover {
-	color: #9356DC;
-}
-
 #restaurants ul {
 	display: flex;
-	flex-wrap: wrap;
-	padding-bottom: 50px;
 }
 
 .cartesDesRestos {
-	width: 47%;
+	width: 23%;
 }
 
 .cartesDesRestos img {
-	height: 400px;
+	height: 200px;
 	object-position: center;
 }	
 
 .nouveau {
-	font-size: 30px;
-	padding: 10px 15px;
+	font-size: 20px;
+	padding: 5px 10px;
 	top: 20px;
 	right: 20px;
 }
 
 h4, .quatreMenus h4, .quatreMenus h5 {
-	font-size: 25px;
+	font-size: 22px;
 }
 
-figcaption i, .quatreMenus .fa-heart {
-	font-size: 45px;
+#coeurRempli .fa-heart {
+	font-size: 35px;
 }
 
-.fa-heart {
-	padding-right: 60px;
-	padding-top: 20px;
+
+#coeurRempli:hover::before {
+	opacity: 1;
+	animation:progress-bar 3s linear 1s backwards;
+}
+
+#coeurRempli:hover .plein {
+	opacity: 0;
+	
+}
+
+.cartesDesRestos #coeurRempli .fa-heart {
+	top: 0px;
+	left: 0px;
+}
+
+.nomRestoEtCoeur #coeurRempli .fa-heart {
+	top: 40px;
+	left: -50px;
+}
+
+.nomRestoEtCoeur #coeurRempli::before {
+	left: -50px;
 }
 
 /*FOOTER*/
 
 footer {
-	padding: 50px;
+	padding: 20px;
 }
 
 footer ul {
@@ -1038,8 +1181,7 @@ footer li {
 }
 
 footer h3 {
-	font-size: 45px;
-	padding-bottom: 20px;
+	font-size: 35px;
 	display: flex;
 	justify-content: center;
 }
@@ -1051,27 +1193,35 @@ footer i {
 }
 
 footer a {
-	font-size: 30px;
-	line-height: 1.5;
+	font-size: 22px;
+	line-height: 2.5;
 }
 
 /*4 MENUS*/
 
 .fa-arrow-left {
-	font-size: 40px;
+	font-size: 35px;
 }
 
 .headerImage img {
-	height: 480px;
+	height: 230px;
 }
 
+.quatreMenus {
+	padding-bottom: 0;
+}
 .quatreMenus h2 {
-	text-transform: uppercase;
+	padding-left: 50px;
 }
 
-.quatreMenus .fa-solid.fa-heart {
-	padding-right: 130px;
-	padding-top: 40px;
+.quatreMenus h2::after {
+	content: "";
+	background-color: #99E2D0;
+	height: 7px;
+	width: 100px;
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
 }
 
 .quatreMenus h3 {
@@ -1090,31 +1240,54 @@ footer a {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding-bottom: 30px;
-	padding-top: 30px;
 }
 
 .quatreMenus li {
-	height: 105px;
-	width: 40%;
+	height: 75px;
+	width: 35%;
 }
+
+.quatreMenus li:active .boxCheck {
+	transform: translateX(-110px);
+	
+}
+
+.boxCheck {
+	font-size: 22px;
+	right: -110px;
+	width: 110px;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.boxCheck i {
+	font-size: 35px;
+}
+
+
 
 .quatreMenus hgroup {
 	padding-left: 10px;
 }
 
 .quatreMenus h5 {
-	padding-top: 20px;
-	padding-bottom: 15px;
+	padding-top: 10px;
 }
 
 .quatreMenus p {
 	text-align: center;
+	font-size: 20px;
 }
 
 figcaption i {
 	padding-right: 50px;
 	padding-top: 20px;
+}
+
+.boutonCommandez a {
+	font-size: 25px;
 }
 
 }
