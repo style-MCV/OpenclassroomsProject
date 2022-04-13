@@ -370,12 +370,21 @@ img.noteEnchantee {
 
 /*LEGENDE ET COEUR*/
 figcaption {
-	display: flex;
-	justify-content: space-between;
+	position: relative;
+}
+
+#coeurRempli {
+	position: absolute;
+	right: 30px;
+	top: 190px;
+}
+
+#coeurRempli .fa-heart {
+	font-size: 25px;
 }
 
 /*ICONES COEUR ACCUEIL ET MENU*/
-
+/*
 ::before, ::after {
 	box-sizing: border-box;
 }
@@ -404,36 +413,62 @@ figcaption {
 	background: linear-gradient(#FF79DA, #9356DC);
 	opacity: 0;
 }
-
-#coeurRempli {
-	height: 65px;
-	width: 35px;
-	position: absolute;
-	top: 0px;
-	right: 30px;
-	border:transparent 0px solid;
-	background-color: transparent/*noir*/;
-	cursor: pointer;
-}
-
-#coeurRempli:active .plein {
-	opacity: 0;
-	
-}
-
+*/
+/*
 #coeurRempli .fa-heart {
-	position: absolute;
 	top: 20px;
 	left: 5px;
 	font-size: 25px;
-	mix-blend-mode: luminosity;/*border couleur*/
-	transition: all 0.3s ease;
-	background-color: transparent;
 }
 
 .quatreMenus #coeurRempli .fa-heart {
 	top: 40px;
+}*/
+
+#coeurRempli:active::before {
+	opacity: 1;
+	animation:progress-bar 3s linear 1s backwards;
 }
+
+.fa-heart:before {
+    color: transparent;
+    background-size: cover;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    left: 0;
+    background: transparent;
+    transition: all 2s ease;
+}
+
+:active.fa-heart:before {
+    opacity: 0;
+	cursor: pointer;
+	
+}
+
+.fa-heart:after {
+    position: absolute;
+    content: "\f004";
+    background: transparent;
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    left: 0;
+    transition: all 2s ease;
+}
+
+:active.fa-heart:after {
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-size: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+	cursor: pointer;
+}
+
 
 @keyframes progress-bar {
 	0% {
@@ -551,11 +586,14 @@ footer a {
 	align-items: baseline;
 }
 
-/*ICONE COEUR MENUS*/
+/*ICONE COEUR MENUS*//*
 .quatreMenus .fa-heart {
 	padding-right: 40px;
-}
-
+}*/
+.quatreMenus #coeurRempli {
+	right: 35px;
+	top: 40px;
+  }
 /*TITRES ENTREES PLATS DESSERTS*/
 .quatreMenus h3 {
 	text-transform: uppercase;
@@ -834,7 +872,23 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 #coeurRempli .fa-heart {
 	font-size: 30px;
 }
+/*position coeur page accueil*/
 
+figcaption {
+	position: relative;
+}
+
+#coeurRempli {
+	position: absolute;
+	top: 220px;
+}
+
+.quatreMenus #coeurRempli {
+	right: 55px;
+  }
+
+
+/*
 #coeurRempli:active::before {
 	opacity: 1;
 	animation:progress-bar 3s linear 1s backwards;
@@ -858,7 +912,7 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 .nomRestoEtCoeur #coeurRempli::before {
 	left: -30px;
 }
-
+*/
 footer ul {
 	display: flex;
 	width: 100%;
@@ -938,11 +992,6 @@ footer a {
 .boxCheck i {
 	font-size: 30px;
 }
-
-/*figcaption i {
-	padding-right: 50px;
-	padding-top: 20px;
-  }*/
 
 }
 
@@ -1041,10 +1090,7 @@ main h2::after {
 	position: absolute;
 	bottom: 0px;
 	left: 700px;
-  }
-
-
-
+}
 
 .fonctionnement {
 	display: flex;
@@ -1061,6 +1107,7 @@ main h2::after {
 	font-size: 25px;
 
 }
+
 .quatreMenus li {
 	margin: 10px;
 }
@@ -1136,7 +1183,17 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 	font-size: 35px;
 }
 
+#coeurRempli {
+	position: absolute;
+	right: 30px;
+	top: 190px;
+}
 
+.quatreMenus #coeurRempli {
+	right: 35px;
+	top: 40px;
+  }
+/*
 #coeurRempli:hover::before {
 	opacity: 1;
 	animation:progress-bar 3s linear 1s backwards;
@@ -1160,7 +1217,7 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 .nomRestoEtCoeur #coeurRempli::before {
 	left: -50px;
 }
-
+*/
 /*FOOTER*/
 
 footer {
