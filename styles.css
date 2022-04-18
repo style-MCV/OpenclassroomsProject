@@ -62,7 +62,6 @@ table {
 body {
 	background-color: #fff;
 	font-family: 'Roboto', sans-serif;
-	width: 100%;
 }	
 
 /*LOADING SPINNER*/
@@ -132,7 +131,6 @@ h1 {
 	font-size: 30px;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	width: 100%;
 	display: flex;
 	justify-content: center;
 }
@@ -161,6 +159,7 @@ form {
 .formulaire input {
 	border: none;
 	background-color: #eaeaea;
+	border-color: transparent;
 	color: black;
 	font-size: 15px;
 	font-weight: bold;
@@ -194,7 +193,6 @@ h3 {
 	padding-bottom: 5px;
 }
 
-
 header hgroup {
 	display: flex;
 	flex-direction: column;
@@ -221,7 +219,7 @@ header h3 {
 	padding: 15px;
 	background: linear-gradient(-10deg, #9356DC, #FF79DA);
 	opacity: 0.9;
-	font-size: 15px;
+	font-size: 16px;
 	cursor: pointer;
 	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
@@ -242,7 +240,6 @@ header a {
 	color: #ffffff;
 }
 
-
 /*MAIN*/
 
 /*SECTION FONCTIONNEMENT*/
@@ -251,61 +248,52 @@ main h2 {
 	padding: 40px 20px 10px 20px;
 }
 
-/*VISIBILITE DES PUCES 1 2 3*/
+/*LISTE FONCTIONNEMENT*/
 .fonctionnement {
 	padding-left: 10px;
 	padding-bottom: 40px;
 	position: relative;
 }
 
+/*ELEMENTS DES LISTES FONCTIONNEMENTS ET DES 4 MENUS*/
 .fonctionnement li, .quatreMenus li {
 	border-radius: 20px;
 	background-color:  #f6f6f6;
 	opacity: 0.9;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 	margin: 20px;	
 	list-style-type: none;
 }
 
-.fonctionnement span {
-	/*ancien
-	font-size: 20px;
-	color: #9356DC;
-	font-weight: lighter;
-	position: absolute;
-	left: 16px;
-	background-color: transparent;
-	html: &#10102;
-	&#10103;
-	&#10104;*/
+.fonctionnement li {
+	padding: 25px 20px 25px 40px;
+}
 
-	font-size: 17px;
-	color: #fff;
+/*PUCES 1 2 3*/
+.fonctionnement span {
+	font-size: 16px;
 	font-weight: lighter;
 	position: absolute;
 	left: 20px;
+	color: #fff;
 	background-color: #9356DC;
 	width: 25px;
 	height: 25px;
 	border-radius: 100%;
 	text-align: center;
-	line-height: 140%;
-}
-
-.fonctionnement li {
-	padding: 25px 20px 25px 35px;
+	line-height: 150%;
 }
 
 /*ICONES FONCTIONNEMENT*/
 .fonctionnement i {
 	padding-right: 20px;
 	font-size: 20px;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
-/*COULEURS DES LI DE FONCTIONNEMENT AU SURVOL*/
+/*COULEURS DES LI ET ICONES DE FONCTIONNEMENT AU SURVOL*/
 .fonctionnement li:hover {
 	background-color: #f2eafb;
 }
@@ -325,7 +313,6 @@ main h2 {
 /*4 CARTES DES RESTOS*/
 .cartesDesRestos {
 	margin: 20px auto;
-	height: auto;
 	width: 90%;
 	max-width: 1000px;
 	min-width: 300px;
@@ -337,16 +324,18 @@ main h2 {
 
 /*RECTANGLE NOUVEAU*/
 .nouveau {
-	background-color: #99E2D0;
-	color: #008766;
-	padding: 8px 12px;
-	font-size: 13px;
-	font-weight: bold;
 	position: absolute;
 	top: 15px;
 	right: 15px;
+	background-color: #99E2D0;
+	color: #008766;
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 13px;
+	font-weight: bold;
 }
 
+/*IMAGES DES CARTES RESTO*/
 .cartesDesRestos img {
 	height: 170px;
 	width: 100%;
@@ -367,78 +356,39 @@ img.noteEnchantee {
 }
 
 .cartesDesRestos h4 {
-	font-size: 17px;
+	font-size: 18px;
+	opacity: 0.6;
 }
 
-/*LEGENDE ET COEUR*/
+/*COEURS DES CARTES ACCUEIL*/
 
-#coeurRempli {
+.coeurRempli {
 	position: absolute;
-	right: 30px;
-	bottom: 30px;
+	right: 35px;
+	bottom: 25px;
 }
 
-#coeurRempli .fa-heart {
+/*COEURS ACCUEIL ET 4 MENUS*/
+
+.coeurRempli .fa-heart {
 	font-size: 25px;
 }
 
-/*ICONES COEUR ACCUEIL ET MENU*/
-/*
 ::before, ::after {
 	box-sizing: border-box;
 }
-
-figcaption {
-	position: relative;
-}
-
-.fa-solid.fa-heart {
-	font-weight: 400;
-}
-
-#coeurRempli:active::before {
-	opacity: 1;
-	animation:progress-bar 3s linear 1s backwards;
-}
-
-#coeurRempli::before {
-	content: "";
-	transition: all 0.3s ease;
-	position: absolute;
-	top: 20px;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(#FF79DA, #9356DC);
-	opacity: 0;
-}
-*/
-/*
-#coeurRempli .fa-heart {
-	top: 20px;
-	left: 5px;
-	font-size: 25px;
-}
-
-.quatreMenus #coeurRempli .fa-heart {
-	top: 40px;
-}*/
-/*
-#coeurRempli:active::before, #coeurRempli:hover::before {
-	opacity: 1;
-	animation: progress-bar 3s linear 1s backwards;
-}*/
 
 .fa-heart::before {
     color: transparent;
     background-size: cover;
 	background-clip: text;
+	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     left: 0;
     background: transparent;
-    transition: all 4s ease;
+    transition: all 3s ease;
 }
 
 .fa-heart:active::before, .fa-heart:hover::before {
@@ -452,45 +402,24 @@ figcaption {
     background: transparent;
     background-size: cover;
     background-clip: text;
+	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
     left: 0;
-    transition: all 4s ease;
-	/*height: 0%;*/
+    transition: all 3s ease;
+	height: 0%;
 }
 
 .fa-heart:active::after, .fa-heart:hover::after {
     background: linear-gradient(#FF79DA, #9356DC);
     background-size: cover;
     background-clip: text;
+	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
 	cursor: pointer;
-	/*height: 100%;*/
-	animation: progress-bar 3s linear 1s backwards;
-	transition: all 4s ease;
+	height: 100%;
 }
-
-
-@keyframes progress-bar {
-	0% {
-        transform: translateY(40px);
-		opacity: 0;
-    }
-    17% {
-        transform: translateY(30px);
-    }
-    24% {
-        transform: translateY(20px);
-    }
-    46% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-  }
-
 
 /*FOOTER*/
 footer {
@@ -504,8 +433,8 @@ footer {
 /*TITRE FOOTER*/
 footer h3 {
 	color: #ffffff;
-	font-size: 16px;
 	font-weight: initial;
+	padding-bottom: 10px;
 }
 
 /*ICONES FOOTER*/
@@ -514,7 +443,7 @@ footer i {
 	padding-right: 10px;
 }
 
-/*ESPACEMENT ENTRE LES LI*/
+/*ESPACEMENT ENTRE ELEMENTS DE LA LISTE DU FOOTER*/
 footer li {
 	padding-top: 10px;
 }
@@ -522,23 +451,11 @@ footer li {
 /*LIENS FOOTER*/
 footer a {
 	color: #ffffff;
-	font-size: 15px;
 }
 
-
-/*LES 4 MENUS*/
+/*//PAGE DES 4 MENUS//*/
 
 /*HEADER*/
-
-.headerImage {
-	width: 100%;
-}
-
-.headerImage img {
-	width: 100%;
-	height: 250px;
-	object-fit: cover;
-}
 
 /*FLECHE ET LOGO*/
 .bandeauHeaderMenu {
@@ -551,7 +468,7 @@ footer a {
 	font-size: 22px;
 }
 
-/*COULEUR LIEN BOUTON RETOUR*/
+/*COULEUR LIEN FLECHE RETOUR*/
 .lienHeaderMenu {
 	color: #353535;
 }
@@ -562,14 +479,32 @@ footer a {
 	padding-right: 70px;
 }
 
+/*IMAGE QUI S'ADAPTE*/
+.headerImage {
+	width: 100%;
+}
+/*IMAGE QUI NE SE DEFORME PAS*/
+.headerImage img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
 
 /*MAIN*/
-
+/*NOM DU RESTO ENTREES PLATS DESSERTS BOUTON COMMANDEZ*/
 .quatreMenus {
 	background-color:#f6f6f6 ;
 	padding-bottom: 15px;
 	border-radius: 40px 40px 0 0;
 	top: -50px;
+	position: relative;/*POSITIONNE LE COEUR EN ABSOLUTE*/
+}
+
+/*NOM DU RESTO ET COEUR*/
+.nomRestoEtCoeur {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 	position: relative;
 }
 
@@ -581,28 +516,18 @@ footer a {
 	padding-bottom: 40px;
 }
 
-/*NOM DU RESTO ET COEUR*/
-.nomRestoEtCoeur {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
+/*POSITION COEURS DES 4 MENUS*/
+.quatreMenus .coeurRempli {
+	bottom: 45px;
 }
 
-/*ICONE COEUR MENUS*//*
-.quatreMenus .fa-heart {
-	padding-right: 40px;
-}*/
-.quatreMenus #coeurRempli {
-	right: 35px;
-	top: 40px;
-  }
 /*TITRES ENTREES PLATS DESSERTS*/
 .quatreMenus h3 {
 	text-transform: uppercase;
 	padding-left: 20px;
 	font-weight: initial;
 	font-size: 17px;
-	position: relative;
+	position: relative;/*POSITIONNE LA LIGNE VERTE EN ABSOLUTE*/
 }
 
 /*LIGNE VERTE SOUS ENTREES PLATS DESSERTS*/
@@ -625,17 +550,19 @@ footer a {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-
+/*PREMIERE LIGNE DES PLATS*/
 .quatreMenus h4 {
 	font-size: 18px;
-	overflow: hidden;
 	text-overflow: ellipsis;
+	overflow: hidden;
 	white-space: nowrap;
+	padding-top: 5px;
 }
 
+/*DEUXIEME LIGNE DES PLATS*/
 .quatreMenus h5 {
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	font-weight: initial;
 	font-size: 15px;
 	text-overflow: ellipsis;
@@ -645,30 +572,29 @@ footer a {
 
 /*PRIX DES PLATS*/
 .quatreMenus p {
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	width: 23%;
 	text-align: center;
 }
-
 
 /*TITRES PRIX DES PLATS ET COCHES ALIGNES ET APPARITION GRADUELLE DES PLATS*/
 .quatreMenus li {
 	display: flex;
 	align-items: flex-end;
 	cursor: pointer;
-	transition: all 0.3s ease;
+	padding: 10px 0px 10px 12px;
+	margin-left: 10px;
+	margin-right: 10px;
 	overflow: hidden;
-	position: relative;
+	position: relative;/*COCHE VERTE EN POSITION ABSOLUTE*/
 	opacity: 0;
+	transition: all 0.3s ease;
 	animation: apparition 0.5s ease;
   	animation-delay: 0s;
   	animation-fill-mode: none;
 	animation-fill-mode: forwards;
-	padding: 10px 0px 10px 12px;
-	margin-left: 10px;
-	margin-right: 10px;
 }
-
+/*APPARITION DES PLATS UN A UN*/
 .quatreMenus li:nth-of-type(1) {
 	animation-delay: 0.7s;
 }
@@ -697,33 +623,18 @@ footer a {
 }
 
 
-/*ICONES COCHES VERTES A DROITE*/
-
+/*AU CLIC SUR LE PLAT*/
 .quatreMenus li:active {
 	padding: 16px 80px 16px 12px;
 	cursor: pointer;
 }
 
-.quatreMenus li:active .boxCheck i {
-	transform: rotate(360deg);
-}
-
+/*AU CLIC BOUTON VERT A DROITE APPARAIT*/
 .quatreMenus li:active .boxCheck {
-	transform: translateX(-70px);
-	
+	transform: translateX(-70px);	
 }
 
-.boxCheck i {
-	color: #ffffff;
-	background-color:#99E2D0;
-	font-size: 22px;
-	transition: all 0.5s ease;
-	justify-content: center;
-	align-items: center;
-
-	/*transition: transform 280ms ease-out 50ms;*/
-}
-
+/*BOUTON VERT AVEC ICONE CHECK*/
 .boxCheck {
 	padding: 0px;
 	font-size: 22px;
@@ -740,12 +651,20 @@ footer a {
 	justify-content: center;
 	align-items: center;
 	transition: all 0.3s ease;
-
 }
-/*
-.quatreMenus section i {
-	opacity: 0;
-}*/
+
+/*ICONE BLANCHE ET VERTE*/
+.boxCheck i {
+	color: #ffffff;
+	background-color:#99E2D0;
+	font-size: 22px;
+	transition: all 0.5s ease;
+}
+
+/*AU CLIC ICONE TOURNE*/
+.quatreMenus li:active .boxCheck i {
+	transform: rotate(360deg);
+}
 
 /*BOUTON COMMANDEZ*/
 .boutonCommandez {
@@ -756,12 +675,8 @@ footer a {
 	color: #ffffff;
 	display: flex;
 	justify-content: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
 	font-size: 16px;
 }
-
-
 
 
  /*MEDIA QUERIES*/
@@ -788,6 +703,7 @@ h1 {
 .formulaire {
 	padding-left: 140px;
 }
+
 .fa-arrow-left {
 	font-size: 30px;
 }
@@ -845,11 +761,11 @@ main h2 {
 	height: 40px;
 }
 
-
 .fonctionnement i {
 	padding-right: 40px;
 	font-size: 40px;
 }
+
 #restaurants {
 	padding-bottom: 70px;
 }
@@ -858,6 +774,7 @@ main h2 {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .cartesDesRestos {
 	width: 45%;
 }
@@ -871,51 +788,11 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 	font-size: 23px;
 }
 
-#coeurRempli .fa-heart {
+/*TAILLE COEUR ACCUEIL*/
+.coeurRempli .fa-heart {
 	font-size: 30px;
 }
 
-/*position coeur page accueil*/
-
-figcaption {
-	position: relative;
-}
-
-#coeurRempli {
-	position: absolute;
-	bottom: 25px;
-}
-
-.quatreMenus #coeurRempli {
-	right: 55px;
-  }
-
-
-/*
-#coeurRempli:active::before {
-	opacity: 1;
-	animation:progress-bar 3s linear 1s backwards;
-}
-
-#coeurRempli:active .plein {
-	opacity: 0;
-	
-}
-
-.cartesDesRestos #coeurRempli .fa-heart {
-	top: 20px;
-	left: 0px;
-}
-
-.nomRestoEtCoeur #coeurRempli .fa-heart {
-	top: 50px;
-	left: -30px;
-}
-
-.nomRestoEtCoeur #coeurRempli::before {
-	left: -30px;
-}
-*/
 footer ul {
 	display: flex;
 	width: 100%;
@@ -951,6 +828,11 @@ footer a {
 
 .headerImage img {
 	height: 150px;
+}
+
+.quatreMenus .coeurRempli {
+	right: 50px;
+	bottom: 35px;
 }
 
 .quatreMenus h3 {
@@ -997,19 +879,17 @@ footer a {
 }
 
 .boutonCommandez a {
-	font-size: 20px;
+	font-size: 23px;
 }
 
 }
-
-
 
 /*VERSION DESKTOP*/
 
 @media screen and (min-width: 992px){
 
 body {
-		max-width: 1600px;
+	max-width: 1600px;
 
 }
 
@@ -1072,14 +952,11 @@ h2, .quatreMenus h2 {
 }
 
 .boutonCommandez {
-	margin: 20px 380px 30px;
+	margin: 20px 480px 30px;
 }
 
 /*MAIN*/
-
 /*FONCTIONNEMENT 123*/
-
-
 main h2 {
 	padding: 10px;
 	display: flex;
@@ -1112,7 +989,6 @@ main h2::after {
 
 .fonctionnement li, .quatreMenus li {
 	font-size: 25px;
-
 }
 
 .quatreMenus li {
@@ -1137,9 +1013,7 @@ main h2::after {
 	color: #9356DC;
 }
 
-
 /*RESTAURANTS*/
-
 #restaurants {
 	padding-bottom: 70px;
 }
@@ -1160,7 +1034,6 @@ main h2::after {
 	bottom: 0px;
 	left: 700px;
 }
-
 
 #restaurants ul {
 	display: flex;
@@ -1186,45 +1059,14 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 	font-size: 22px;
 }
 
-#coeurRempli .fa-heart {
+.coeurRempli .fa-heart {
 	font-size: 35px;
 }
 
-#coeurRempli {
-	position: absolute;
-	right: 30px;
-	bottom: 25px;
+.quatreMenus .coeurRempli {
+	left: 380px;
 }
 
-.quatreMenus #coeurRempli {
-	right: 100px;
-	top: 40px;
-  }
-/*
-#coeurRempli:hover::before {
-	opacity: 1;
-	animation:progress-bar 3s linear 1s backwards;
-}
-
-#coeurRempli:hover .plein {
-	opacity: 0;
-	
-}
-
-.cartesDesRestos #coeurRempli .fa-heart {
-	top: 0px;
-	left: 0px;
-}
-
-.nomRestoEtCoeur #coeurRempli .fa-heart {
-	top: 40px;
-	left: -50px;
-}
-
-.nomRestoEtCoeur #coeurRempli::before {
-	left: -50px;
-}
-*/
 /*FOOTER*/
 
 footer {
@@ -1274,6 +1116,7 @@ footer a {
 .quatreMenus {
 	padding-bottom: 0;
 }
+
 .quatreMenus h2 {
 	padding-left: 50px;
 }
@@ -1330,8 +1173,6 @@ footer a {
 	font-size: 35px;
 }
 
-
-
 .quatreMenus hgroup {
 	padding-left: 10px;
 }
@@ -1340,8 +1181,8 @@ footer a {
 	padding-top: 10px;
 }
 
+/*PRIX DES PLATS*/
 .quatreMenus p {
-	text-align: center;
 	font-size: 20px;
 }
 
