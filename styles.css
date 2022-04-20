@@ -549,7 +549,9 @@ footer a {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	transition: all 0.3s ease;
 }
+
 /*PREMIERE LIGNE DES PLATS*/
 .quatreMenus h4 {
 	font-size: 18px;
@@ -594,6 +596,7 @@ footer a {
   	animation-fill-mode: none;
 	animation-fill-mode: forwards;
 }
+
 /*APPARITION DES PLATS UN A UN*/
 .quatreMenus li:nth-of-type(1) {
 	animation-delay: 0.7s;
@@ -622,11 +625,13 @@ footer a {
   }
 }
 
-
-/*AU CLIC SUR LE PLAT*/
+/*AU CLIC SUR LES PLATS*/
 .quatreMenus li:active {
-	padding: 16px 80px 16px 12px;
 	cursor: pointer;
+}
+
+.quatreMenus li:active hgroup {
+	width: calc( 77% - 70px );
 }
 
 /*AU CLIC BOUTON VERT A DROITE APPARAIT*/
@@ -679,8 +684,8 @@ footer a {
 }
 
 
- /*MEDIA QUERIES*/
- /*VERSION TABLETTE*/
+/*MEDIA QUERIES*/
+/*VERSION TABLETTE*/
 
 @media screen and (min-width: 769px) and (max-width: 992px) 
 {
@@ -707,6 +712,7 @@ footer a {
 h1 {
 	font-size: 35px;
 }
+
 /*FORMULAIRE DE RECHERCHE*/
 .formulaire {
 	padding-left: 110px;
@@ -855,7 +861,7 @@ footer a {
 	padding-left: 40px;
 }
 
-/*LLIGNE VERTE SOUS TITRES*/
+/*LIGNE VERTE SOUS TITRES*/
 .quatreMenus h3::after {
 	height: 5px;
 	width: 60px;
@@ -866,20 +872,6 @@ footer a {
 .quatreMenus li {
 	height: 75px;
 	margin: 35px;
-}
-
-/*AU CLIC SUR LES PLATS TRANSLATION DU BOUTON VERT*/
-.quatreMenus li:active {
-	padding: 16px 80px 16px 12px;
-}
-
-.quatreMenus li:active .boxCheck {
-	transform: translateX(-110px);
-}
-
-.boxCheck {
-	right: -110px;
-	width: 110px;
 }
 
 /*ICONE DU BOUTON VERT*/
@@ -894,6 +886,29 @@ footer a {
 
 }
 
+
+/*MEDIA QUERIES TABLETTE ET DESKTOP*/
+/* VERSION TABLETTE et + */
+@media screen and (min-width: 769px)
+{
+
+/*AU CLIC SUR LES PLATS TRANSLATION DU BOUTON VERT*/
+.quatreMenus li:active hgroup {
+	width: calc( 77% - 110px );
+}
+
+.quatreMenus li:active .boxCheck {
+	transform: translateX(-110px);
+}
+
+.boxCheck {
+	right: -110px;
+	width: 110px;
+}
+
+}
+
+/*MEDIA QUERIES*/
 /*VERSION DESKTOP*/
 
 @media screen and (min-width: 992px)
@@ -1107,8 +1122,8 @@ footer i {
 }
 
 footer a {
-	font-size: 22px;
-	line-height: 2.5;
+	font-size: 25px;
+	line-height: 2;
 }
 
 /*4 MENUS*/
@@ -1171,18 +1186,6 @@ footer a {
 
 .quatreMenus h5 {
 	padding-top: 10px;
-}
-
-/*TRANSLATION DU BOUTON VERT AU CLIC*/
-.quatreMenus li:active .boxCheck {
-	transform: translateX(-110px);
-	
-}
-
-/*BOUTON VERT*/
-.boxCheck {
-	right: -110px;
-	width: 110px;
 }
 
 /*ICONE DU BOUTON VERT*/
