@@ -682,8 +682,10 @@ footer a {
  /*MEDIA QUERIES*/
  /*VERSION TABLETTE*/
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) 
+{
 
+/*LOADING SPINNER*/	
 .loader {
 	border-top: 6em solid #FF79DA;
 	border-right: 6em solid #9356DC ;
@@ -696,34 +698,25 @@ footer a {
 	background-size: 500px;
 }
 
+/*FLECHE*/
+.fa-arrow-left {
+	font-size: 30px;
+}
+
+/*LOGO OHMYFOOD*/
 h1 {
 	font-size: 35px;
 }
-
+/*FORMULAIRE DE RECHERCHE*/
 .formulaire {
-	padding-left: 140px;
-}
-
-.fa-arrow-left {
-	font-size: 30px;
+	padding-left: 110px;
 }
 
 .Réservez, header h3 {
 	padding-bottom: 20px;
 }
 
-.formulaire input, form, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
-	font-size: 20px;
-}
-
-.boutonExplorez, .boutonCommandez {
-	padding: 17px;
-}
-
-.boutonCommandez {
-	margin: 60px 160px 50px;
-}
-
+/*RESERVEZ LE MENU*/
 header h2 {
 	padding-top: 20px;
 }
@@ -732,6 +725,20 @@ header h2, header h3 {
   width: 100%;
 }
 
+.formulaire input, form, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
+	font-size: 20px;
+}
+
+/*LES BOUTONS*/
+.boutonExplorez, .boutonCommandez {
+	padding: 17px;
+}
+
+.boutonCommandez {
+	margin: 60px 160px 50px;
+}
+
+/*TITRES FONCTIONNEMENT -RESTAURANTS- NOMS DES RESTOS*/
 h2, .quatreMenus h2 {
   font-size: 27px;
 }
@@ -745,6 +752,7 @@ main h2 {
 	padding-bottom: 0;
 }
 
+/*ELEMENTS DES LISTES FONCTIONNEMENT ET PLATS*/
 .fonctionnement li {
   padding: 20px 10px 20px 70px;
 }
@@ -754,6 +762,7 @@ main h2 {
 	margin: 15px 40px;
 }
 
+/*1 2 ET 3 DU FONCTIONNEMENT*/
 .fonctionnement span {
 	font-size: 25px;
 	left: 30px;
@@ -761,15 +770,18 @@ main h2 {
 	height: 40px;
 }
 
+/*ICONES DU FONCTIONNEMENT*/
 .fonctionnement i {
 	padding-right: 40px;
 	font-size: 40px;
 }
 
+/*RESTAURANTS*/
 #restaurants {
 	padding-bottom: 70px;
 }
 
+/*CARTES DES RESTOS*/
 #restaurants ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -793,6 +805,14 @@ h4, .quatreMenus h4, .quatreMenus h5 {
 	font-size: 30px;
 }
 
+/*FOOTER*/
+/*TITRE LOGO*/
+footer h3 {
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+}
+
 footer ul {
 	display: flex;
 	width: 100%;
@@ -804,13 +824,6 @@ footer li {
 	display: flex;
 	padding-left: 10px;
 	padding-right: 10px;
-}
-
-footer h3 {
-	font-size: 30px;
-	padding-bottom: 10px;
-	display: flex;
-	justify-content: center;
 }
 
 footer i {
@@ -830,34 +843,34 @@ footer a {
 	height: 150px;
 }
 
+/*ICONE COEUR*/
 .quatreMenus .coeurRempli {
-	right: 50px;
+	right: 60px;
 	bottom: 35px;
 }
 
+/*TITRES ENTREES PLATS DESSERTS*/
 .quatreMenus h3 {
 	width: 20%;
 	padding-left: 40px;
 }
 
+/*LLIGNE VERTE SOUS TITRES*/
 .quatreMenus h3::after {
-	content: "";
-	background-color: #99E2D0;
 	height: 5px;
 	width: 60px;
-	position: absolute;
-	bottom: -5px;
 	left: 40px;
 }
 
+/*PLATS*/
 .quatreMenus li {
 	height: 75px;
 	margin: 35px;
 }
 
+/*AU CLIC SUR LES PLATS TRANSLATION DU BOUTON VERT*/
 .quatreMenus li:active {
 	padding: 16px 80px 16px 12px;
-	cursor: pointer;
 }
 
 .quatreMenus li:active .boxCheck {
@@ -865,19 +878,16 @@ footer a {
 }
 
 .boxCheck {
-	font-size: 22px;
 	right: -110px;
 	width: 110px;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.3s ease;
 }
 
+/*ICONE DU BOUTON VERT*/
 .boxCheck i {
 	font-size: 30px;
 }
 
+/*BOUTON COMMANDEZ*/
 .boutonCommandez a {
 	font-size: 23px;
 }
@@ -886,13 +896,15 @@ footer a {
 
 /*VERSION DESKTOP*/
 
-@media screen and (min-width: 992px){
-
+@media screen and (min-width: 992px)
+{
+	
 body {
 	max-width: 1600px;
 
 }
 
+/*LOADING SPINNER*/
 .loader {
 	border-top: 6em solid #FF79DA;
 	border-right: 6em solid #9356DC ;
@@ -917,15 +929,16 @@ h1 {
 	padding-left: 100px;
 }
 
-.formulaire input, form, .fa-map-marker-alt, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
-	font-size: 25px;
-}
-
 form {
 	display: flex;
 	width: 21%;
 }
 
+.formulaire input, form, .fa-map-marker-alt, h3, .boutonExplorez, .boutonCommandez, .quatreMenus h3 {
+	font-size: 25px;
+}
+
+/*RESERVEZ LE MENU*/
 .Réservez {
 	padding-bottom: 25px;
 }
@@ -935,7 +948,7 @@ header h2 {
 }
 
 header h2, header h3 {
-  width: 100%;
+  	width: 100%;
 }
 
 header h3 {
@@ -956,7 +969,8 @@ h2, .quatreMenus h2 {
 }
 
 /*MAIN*/
-/*FONCTIONNEMENT 123*/
+
+/*TITRES FONCTIONNEMENT ET RESTAURANTS*/
 main h2 {
 	padding: 10px;
 	display: flex;
@@ -966,6 +980,7 @@ main h2 {
 	font-family:'Shrikhand', cursive;
 }
 
+/*LIGNE VERTE SOUS LES TITRES*/
 main h2::after {
 	content: "";
 	background-color: #99E2D0;
@@ -976,6 +991,7 @@ main h2::after {
 	left: 700px;
 }
 
+/*FONCTIONNEMENT*/
 .fonctionnement {
 	display: flex;
 	justify-content: space-evenly;
@@ -995,22 +1011,22 @@ main h2::after {
 	margin: 10px;
 }
 
+/*1 2 3 FONCTIONNEMENT*/
 .fonctionnement span {
 	font-size: 25px;
 	display: inline-block;
-	line-height: inherit;
+	line-height: initial;
+	width: 35px;
+	height: 35px;
 	margin-right: 20px;
-	margin-left: -15px;
+	margin-left: -20px;
 	position: inherit;
 }
 
+/*ICONES DE FONCTIONNEMENT*/
 .fonctionnement i {
 	padding-right: 10px;
 	font-size: 30px;
-}
-
-.fonctionnement i:hover {
-	color: #9356DC;
 }
 
 /*RESTAURANTS*/
@@ -1020,21 +1036,9 @@ main h2::after {
 
 #restaurants h2 {
 	text-transform: uppercase;
-	font-size: 27px;
-	position: relative;
 }
 
-/*LIGNE VERTE SOUS TITRE RESTAURANTS*/
-#restaurants h2::after {
-	content: "";
-	background-color: #99E2D0;
-	height: 7px;
-	width: 100px;
-	position: absolute;
-	bottom: 0px;
-	left: 700px;
-}
-
+/*CARTES DES RESTOS EN LIGNE*/
 #restaurants ul {
 	display: flex;
 }
@@ -1048,6 +1052,7 @@ main h2::after {
 	object-position: center;
 }	
 
+/*RECTANGLE VERT NOUVEAU*/
 .nouveau {
 	font-size: 20px;
 	padding: 5px 10px;
@@ -1055,14 +1060,17 @@ main h2::after {
 	right: 20px;
 }
 
-h4, .quatreMenus h4, .quatreMenus h5 {
+/*LEGENDES LIEUX DES RESTOS*/
+.cartesDesRestos h4, .quatreMenus h4, .quatreMenus h5 {
 	font-size: 22px;
 }
 
+/*ICONE COEUR*/
 .coeurRempli .fa-heart {
 	font-size: 35px;
 }
 
+/*ICONE COEUR DES 4 MENUS*/
 .quatreMenus .coeurRempli {
 	left: 380px;
 }
@@ -1073,9 +1081,15 @@ footer {
 	padding: 20px;
 }
 
+/*TITRE LOGO*/
+footer h3 {
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+}
+
 footer ul {
 	display: flex;
-	width: 100%;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
@@ -1086,15 +1100,9 @@ footer li {
 	padding-right: 10px;
 }
 
-footer h3 {
-	font-size: 35px;
-	display: flex;
-	justify-content: center;
-}
-
+/*ICONES DU FOOTER*/
 footer i {
 	font-size: x-large;
-	padding-right: 10px;
 	padding-top: 10px;
 }
 
@@ -1105,6 +1113,8 @@ footer a {
 
 /*4 MENUS*/
 
+/*HEADER*/
+/*FLECHE*/
 .fa-arrow-left {
 	font-size: 35px;
 }
@@ -1113,29 +1123,29 @@ footer a {
 	height: 230px;
 }
 
+/*MAIN*/
 .quatreMenus {
 	padding-bottom: 0;
 }
 
+/*TITRE NOM DU RESTO*/
 .quatreMenus h2 {
 	padding-left: 50px;
 }
 
+/*LIGNE VERTE SOUS NOM*/
 .quatreMenus h2::after {
-	content: "";
-	background-color: #99E2D0;
-	height: 7px;
-	width: 100px;
-	position: absolute;
 	bottom: 20px;
 	left: 50px;
 }
 
+/*ENTREES PLATS DESSERTS*/
 .quatreMenus h3 {
 	width: 20%;
 	padding-left: 90px;
 }
 
+/*LIGNE VERTE SOUS ENTREES PLATS DESSERTS*/
 .quatreMenus h3::after {
 	left: 90px;
 	height: 6px;
@@ -1143,6 +1153,7 @@ footer a {
 	bottom: -8px;
 }
 
+/*PLATS*/
 .quatreMenus ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -1154,25 +1165,6 @@ footer a {
 	width: 35%;
 }
 
-.quatreMenus li:active .boxCheck {
-	transform: translateX(-110px);
-	
-}
-
-.boxCheck {
-	font-size: 22px;
-	right: -110px;
-	width: 110px;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.3s ease;
-}
-
-.boxCheck i {
-	font-size: 35px;
-}
-
 .quatreMenus hgroup {
 	padding-left: 10px;
 }
@@ -1181,16 +1173,29 @@ footer a {
 	padding-top: 10px;
 }
 
+/*TRANSLATION DU BOUTON VERT AU CLIC*/
+.quatreMenus li:active .boxCheck {
+	transform: translateX(-110px);
+	
+}
+
+/*BOUTON VERT*/
+.boxCheck {
+	right: -110px;
+	width: 110px;
+}
+
+/*ICONE DU BOUTON VERT*/
+.boxCheck i {
+	font-size: 35px;
+}
+
 /*PRIX DES PLATS*/
 .quatreMenus p {
-	font-size: 20px;
+	font-size: 22px;
 }
 
-figcaption i {
-	padding-right: 50px;
-	padding-top: 20px;
-}
-
+/*BOUTON COMMANDEZ*/
 .boutonCommandez a {
 	font-size: 25px;
 }
