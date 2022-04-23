@@ -802,7 +802,6 @@ main h2 {
 
 .cartesDesRestos img {
 	height: 200px;
-	object-position: center;
 }	
 
 h4, .quatreMenus h4, .quatreMenus h5 {
@@ -896,11 +895,15 @@ footer a {
 {
 
 /*AU CLIC SUR LES PLATS TRANSLATION DU BOUTON VERT*/
-.quatreMenus li:active hgroup {
+.quatreMenus li:hover {
+	cursor: pointer;
+}
+
+.quatreMenus li:hover hgroup {
 	width: calc( 77% - 110px );
 }
 
-.quatreMenus li:active .boxCheck {
+.quatreMenus li:hover .boxCheck {
 	transform: translateX(-110px);
 }
 
@@ -1058,14 +1061,15 @@ main h2::after {
 /*CARTES DES RESTOS EN LIGNE*/
 #restaurants ul {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .cartesDesRestos {
-	width: 23%;
+	width: 45%;
 }
 
 .cartesDesRestos img {
-	height: 200px;
+	height: 250px;
 	object-position: center;
 }	
 
