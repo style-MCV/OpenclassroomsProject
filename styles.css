@@ -631,16 +631,16 @@ footer a {
 }
 
 /*AU CLIC SUR LES PLATS*/
-.quatreMenus li:active {
+.quatreMenus li:active, .quatreMenus li:hover {
 	cursor: pointer;
 }
 
 /*AU CLIC BOUTON VERT A DROITE APPARAIT*/
-.quatreMenus li:active .boxCheck {
+.quatreMenus li:active .boxCheck, .quatreMenus li:hover .boxCheck {
 	transform: translateX(-70px);	
 }
 
-.quatreMenus li:active hgroup {
+.quatreMenus li:active hgroup, .quatreMenus li:hover hgroup {
 	width: calc( 77% - 70px );
 }
 
@@ -672,7 +672,7 @@ footer a {
 }
 
 /*AU CLIC ICONE TOURNE*/
-.quatreMenus li:active .boxCheck i {
+.quatreMenus li:active .boxCheck i, .quatreMenus li:hover .boxCheck i {
 	transform: rotate(360deg);
 }
 
